@@ -10,33 +10,29 @@ export default {
             <h2 
                 class="book-app-inner-container"
                 v-if="booksErr.isErr"
-                >
-                {{booksErr.errMsg}}
+                >{{booksErr.errMsg}}
             </h2>
             
             <div
                 class="book-app-inner-container"
-                v-if="!booksErr.isErr"
-            >
-                <book-filter 
+                v-if="!booksErr.isErr">
+                
+                <notes-filter 
                         v-if="!selectedNote"
-                        @set-filter="setFilter"
-                    >    
-                    </book-filter>
+                        @set-filter="setFilter">    
+                </notes-filter>
                     
-                    <book-list 
-                        v-if="!selectedNote"
-                        :books="booksForDisplay"
-                        @note-selected="setSelectedNote"
-                    >
-                    </book-list>
-                        
-                    <book-details
-                        v-if="selectedNote"
-                        :book="selectedNote"
-                        @back-to-list="backToList"
-                    >
-                    </book-details>
+                <notes-list 
+                    v-if="!selectedNote"
+                    :books="booksForDisplay"
+                    @note-selected="setSelectedNote">
+                </notes-list>
+                    
+                <note-details
+                    v-if="selectedNote"
+                    :book="selectedNote"
+                    @back-to-list="backToList">
+                </note-details>
             </div>
             
                 
@@ -68,9 +64,9 @@ export default {
         },
     },
     components: {
-        bookList: notesList,
-        bookFilter: notesFilter,
-        bookDetails: noteDetails,
+        notesList,
+        notesFilter,
+        noteDetails,
     },
     created() {
         let booksPrm = notesService.query()
