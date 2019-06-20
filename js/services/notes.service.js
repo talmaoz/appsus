@@ -5,46 +5,52 @@ export default {
     query
 }
 
-const BOOKS_KEY = 'books'
+const NOTES_KEY = 'notes'
 
 // Simulation controllers:
 const SIMULATED_SERVER_DELAY = 0.001 * 1000
 const SIMULATE_SERVER_ERR    = false
 
 function query() {
-    let books = storageService.load(BOOKS_KEY);
-    if (!books) {
-        books = generateBooks();
-        storageService.store(BOOKS_KEY, books)
+    let notes = storageService.load(NOTES_KEY);
+    if (!notes) {
+        notes = generateNotes();
+        storageService.store(NOTES_KEY, notes)
     }
-    if (SIMULATE_SERVER_ERR) books = null
+    if (SIMULATE_SERVER_ERR) notes = null
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
-            if (!books) {
+            if (!notes) {
                 reject(`Couldn't retrieve data from server.`)
             } else {
-                resolve(books)
+                resolve(notes)
             }
         }, SIMULATED_SERVER_DELAY)
     })
 }
 
-function generateBooks() {
-    var books = []
+function generateNotes() {
+    var notes = []
     for (let index = 0; index < 20; index++) {
-        var book = createBook()
-        books.push(book)
+        let note = createNote()
+        notes.push(note)
 
     }
-    return books;
+    return notes;
 }
 
-function createBook() {
+function createNote() {
     let imgBaseUrl = 'http://coding-academy.org/books-photos/'
+    // let thumbnail = ''
+    // if (utilService.getRandomInt(0, 100) > 80) {
+    //     thumbnail = imgBaseUrl + utilService.getRandomInt(1, 21) + '.jpg'
+    // }
+
     return {
         id: utilService.makeId(),
         title: utilService.makeLorem(10),
         publishedDate: utilService.getRandomInt(1900, 2000),
+        // thumbnail: thumbnail,
         thumbnail: imgBaseUrl + utilService.getRandomInt(1, 21) + '.jpg',
         price: utilService.getRandomInt(50, 400),
         pages: utilService.getRandomInt(50, 900),
