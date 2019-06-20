@@ -6,6 +6,6 @@ import bookApp from './pages/notes-app.cmp.js';
 export default [
     { path: '/', component: homepageCmp },
     { path: '/about', component: aboutCmp },
-    { path: '/book', component: bookApp },
+    { path: '/notes', component: bookApp },
     // { path: '/book/:theBookId', component: bookDetails },
 ]
