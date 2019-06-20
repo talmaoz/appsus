@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9bb7d03f-645e-401a-a096-d2d822e9a813" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/cmps/book/book-list.cmp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cmps/book/book-list.cmp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/pages/notes-app.cmp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pages/notes-app.cmp.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/pages/notes-app.cmp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+            <state relative-caret-position="309">
+              <caret line="68" column="6" lean-forward="true" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="6" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -80,6 +79,7 @@
     </findStrings>
     <replaceStrings>
       <replace>appsus</replace>
+      <replace>selectedNote</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -531,11 +531,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561034362760</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="transition from books to notes - WIP 8">
+      <created>1561034583933</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1561034583933</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32794000" />
+    <option name="totallyTimeSpent" value="32896000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -573,7 +580,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cleaned book-app and book-list cmps" />
     <MESSAGE value="Renamed stuff in book-app" />
     <MESSAGE value="&#10;Renamed some more stuff in book-app" />
     <MESSAGE value="Cleaned book-preview car refrences (changed to book, deleted redundant crap)" />
@@ -598,7 +604,8 @@
     <MESSAGE value="transition from books to notes - WIP 5" />
     <MESSAGE value="transition from books to notes - WIP 6" />
     <MESSAGE value="transition from books to notes - WIP 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="transition from books to notes - WIP 7" />
+    <MESSAGE value="transition from books to notes - WIP 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="transition from books to notes - WIP 8" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/vue.js">
@@ -802,8 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/pages/notes-app.cmp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+        <state relative-caret-position="309">
+          <caret line="68" column="6" lean-forward="true" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="6" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>

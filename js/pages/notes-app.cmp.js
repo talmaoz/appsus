@@ -19,21 +19,21 @@ export default {
                 v-if="!booksErr.isErr"
             >
                 <book-filter 
-                        v-if="!selectedBook"
+                        v-if="!selectedNote"
                         @set-filter="setFilter"
                     >    
                     </book-filter>
                     
                     <book-list 
-                        v-if="!selectedBook"
+                        v-if="!selectedNote"
                         :books="booksForDisplay"
                         @note-selected="setSelectedNote"
                     >
                     </book-list>
                         
                     <book-details
-                        v-if="selectedBook"
-                        :book="selectedBook"
+                        v-if="selectedNote"
+                        :book="selectedNote"
                         @back-to-list="backToList"
                     >
                     </book-details>
@@ -46,7 +46,7 @@ export default {
         return {
             filter: null,
             books: [],
-            selectedBook: null,
+            selectedNote: null,
             booksErr: {isErr: false, errMsg: ''},
         }
     },
@@ -61,11 +61,10 @@ export default {
             this.filter = filter
         },
         setSelectedNote(selectedNote) {
-            this.selectedBook = selectedNote
-            console.log('emitSelectedBook =  ', selectedNote)
+            this.selectedNote = selectedNote
         },
         backToList() {
-            this.selectedBook = null
+            this.selectedNote = null
         },
     },
     components: {
