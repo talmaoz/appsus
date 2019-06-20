@@ -1,15 +1,15 @@
 export default {
-    props: ['book'],
+    props: ['note'],
     template: `
-        <li v-on:click="emitSelectedBook">
-            <h3>{{book.title}}</h3>
-            <h4>{{book.price}}$</h4>
-            <img v-bind:title="book.title" v-bind:src="book.thumbnail">
+        <li v-on:click="emitSelectedNote">
+            <h3>{{note.title}}</h3>
+            <h4>{{note.price}}$</h4>
+            <img v-bind:title="note.title" v-bind:src="note.thumbnail">
         </li>
     `,
     methods: {
-        emitSelectedBook() {
-            this.$emit('book-clicked', this.book)
+        emitSelectedNote() {
+            this.$emit('note-clicked', this.note)
         },
     },
 }

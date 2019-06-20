@@ -6,17 +6,17 @@ export default {
     <section>
             <ul class="book-list">
                 <book-preview
-                    @book-clicked="emitBookClickedToApp"
-                    v-for="currentBook in books"
-                    v-bind:key="currentBook.id"
-                    v-bind:book="currentBook">
+                    @note-clicked="emitNoteClickedToApp"
+                    v-for="currentNote in books"
+                    v-bind:key="currentNote.id"
+                    v-bind:note="currentNote">
                 </book-preview>
             </ul>
         </section>
     `,
     methods: {
-        emitBookClickedToApp (clickedBook) {
-            this.$emit('book-selected', clickedBook)
+        emitNoteClickedToApp (clickedNote) {
+            this.$emit('book-selected', clickedNote)
         },
     },
     components: {
