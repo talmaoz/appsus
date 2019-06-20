@@ -8,12 +8,18 @@
 
 .header-container h1 {
     color: antiquewhite;
+    font-size: 2.5em;
 }
 
 .apps-menu-btn {
-    width: 50px;
-    height: 50px;
+    width: 3rem;
+    height: 3rem;
     background-image: url("../img/apps-menu-btn.png");
     background-repeat: no-repeat;
-    background-size: 50px auto; /* to specify dimensions explicitly */
+    background-size: 3rem auto; /* to specify dimensions explicitly */
+}
+
+.apps-menu-btn a {
+    width: 100%;
+    height: 100%;
 }
