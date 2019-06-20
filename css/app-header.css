@@ -1,49 +1,19 @@
 .header-container {
-    width: 100%;
-    /*margin-top: 76px;*/
-    position: fixed;
-}
-
-.app-header {
-    width: 100%;
-    background-color: #1d2124;
-    color: antiquewhite;
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
 }
 
-.app-header .flex-column-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.app-header h1 {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
-.app-header nav{
-    display: flex;
-    justify-content: space-between;
-}
-
-.app-header nav a {
-    font-size: 25px;
-    padding: 3px;
-    margin: 5px;
+.header-container h1 {
     color: antiquewhite;
-    min-width: 120px;
-    min-height: 60px;
-    text-decoration: none;
-    text-align: center;
 }
 
-.app-header nav a:hover {
-    transition: color 0.5s, font-size 0.5s;
-    font-size: 28px;
-    color: rgba(194,31,91,1);
-    text-decoration: underline;
+.apps-menu-btn {
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/apps-menu-btn.png");
+    background-repeat: no-repeat;
+    background-size: 50px auto; /* to specify dimensions explicitly */
 }

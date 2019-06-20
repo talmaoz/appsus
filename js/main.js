@@ -9,9 +9,16 @@ var app = new Vue({
     el: '#app',
     template: `
         <section class="appsus">
-            <app-header class="appsus-header"></app-header>
-            <router-view class="app-container"></router-view>
-            <footer class="appsus-footer">coffeerights 2019</footer>
+            <header class="appsus-header">
+                <app-header></app-header>
+            </header>
+            <section class="appsus-selected-app">
+                <router-view ></router-view>
+            </section>
+            <footer class="appsus-footer">
+                <!-- TODO - Replace "Coffee-rights 2019" with app-footer cmp -->
+                Coffee-rights 2019
+            </footer>
         </section>
     `,
     components: {
