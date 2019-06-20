@@ -1,6 +1,6 @@
-import bookService from '../services/notes.service.js'
-import bookList    from '../cmps/book/book-list.cmp.js'
-import bookFilter  from '../cmps/book/book-filter.cmp.js'
+import notesService from '../services/notes.service.js'
+import notesList    from '../cmps/book/book-list.cmp.js'
+import notesFilter  from '../cmps/book/book-filter.cmp.js'
 import bookDetails from '../cmps/book/book-details.cmp.js'
 
 export default {
@@ -69,12 +69,12 @@ export default {
         },
     },
     components: {
-        bookList,
-        bookFilter,
+        bookList: notesList,
+        bookFilter: notesFilter,
         bookDetails,
     },
     created() {
-        let booksPrm = bookService.query()
+        let booksPrm = notesService.query()
         booksPrm
             .then((booksFromDb) => {
                 this.books = booksFromDb

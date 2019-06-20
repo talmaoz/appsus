@@ -75,7 +75,6 @@ body {
     margin: 0 50px;
     padding: 8px;
     background-color: #1d2124;
-    box-shadow: 0 2px 44px rgba(194,31,91,1);
 }
 
 /*TODO - For responsive view add a query when mobile .app-container {margin: 0 5px;}*/
