@@ -1,6 +1,6 @@
 import notesService from '../services/notes.service.js'
 import notesList    from '../cmps/book/book-list.cmp.js'
-import notesFilter  from '../cmps/book/book-filter.cmp.js'
+import notesFilter  from '../cmps/book/notes-filter.cmp.js'
 import noteDetails from '../cmps/book/note-details.cmp.js'
 
 export default {
@@ -24,7 +24,7 @@ export default {
                     
                 <notes-list 
                     v-if="!selectedNote"
-                    :books="booksForDisplay"
+                    :notes="booksForDisplay"
                     @note-selected="setSelectedNote">
                 </notes-list>
                     

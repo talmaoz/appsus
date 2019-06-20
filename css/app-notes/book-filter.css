@@ -1,13 +1,13 @@
-.book-filter {
+.notes-filter {
     max-width: 500px;
     margin: 5px auto;
 }
 
-.book-filter label {
+.notes-filter label {
     color: antiquewhite;
 }
 
-.book-filter input {
+.notes-filter input {
     color: black;
     min-width: 350px;
 }

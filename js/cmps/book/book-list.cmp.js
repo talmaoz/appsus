@@ -1,16 +1,16 @@
-import bookPreview from './note-preview.cmp.js';
+import notePreview from './note-preview.cmp.js';
 
 export default {
-    props: ['books'],
+    props: ['notes'],
     template: `
     <section>
-            <ul class="book-list">
-                <book-preview
+            <ul class="notes-list">
+                <note-preview
                     @note-clicked="emitNoteClickedToApp"
-                    v-for="currentNote in books"
+                    v-for="currentNote in notes"
                     v-bind:key="currentNote.id"
                     v-bind:note="currentNote">
-                </book-preview>
+                </note-preview>
             </ul>
         </section>
     `,
@@ -20,6 +20,6 @@ export default {
         },
     },
     components: {
-        bookPreview,
+        notePreview,
     },
 }

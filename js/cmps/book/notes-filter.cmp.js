@@ -1,6 +1,6 @@
 export default {
     template: `
-        <section class="book-filter">
+        <section class="notes-filter">
             <label>Search by Name:</label>
             <input 
                 type="text"
