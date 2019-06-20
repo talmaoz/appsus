@@ -3,10 +3,10 @@
 @import './app-header.css';
 @import './about-page.css';
 @import './home-page.css';
-@import './app-notes/book-app.css';
-@import './app-notes/book-filter.css';
-@import './app-notes/book-list.css';
-@import './app-notes/book-details.css';
+@import 'notes-app/notes-app.css';
+@import 'notes-app/notes-filter.css';
+@import 'notes-app/notes-list.css';
+@import 'notes-app/note-details.css';
 
 /* =============================================== */
 /* =============================================== */

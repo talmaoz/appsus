@@ -8,7 +8,7 @@ export default {
 const BOOKS_KEY = 'books'
 
 // Simulation controllers:
-const SIMULATED_SERVER_DELAY = 0.5 * 1000
+const SIMULATED_SERVER_DELAY = 0.001 * 1000
 const SIMULATE_SERVER_ERR    = false
 
 function query() {
