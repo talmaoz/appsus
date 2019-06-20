@@ -1,4 +1,4 @@
-import bookService from '../services/book.service.js'
+import bookService from '../services/notes.service.js'
 import bookList    from '../cmps/book/book-list.cmp.js'
 import bookFilter  from '../cmps/book/book-filter.cmp.js'
 import bookDetails from '../cmps/book/book-details.cmp.js'

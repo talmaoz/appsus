@@ -1,6 +1,6 @@
 import homepageCmp from './pages/homepage.cmp.js';
 import aboutCmp from './pages/about-page.cmp.js';
-import bookApp from './pages/book-app.cmp.js';
+import bookApp from './pages/notes-app.cmp.js';
 // import bookDetails from './pages/book-details.cmp.js';
 
 export default [

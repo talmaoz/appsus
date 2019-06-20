@@ -1,6 +1,6 @@
 'use strict';
 
-import bookApp from './pages/book-app.cmp.js';
+import bookApp from './pages/notes-app.cmp.js';
 import appHeader from './cmps/app-header.cmp.js'
 import theRoutes from './routes.js'
 const myRouter = new VueRouter({ routes: theRoutes })
