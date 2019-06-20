@@ -1,7 +1,7 @@
 import notesService from '../services/notes.service.js'
 import notesList    from '../cmps/book/book-list.cmp.js'
 import notesFilter  from '../cmps/book/book-filter.cmp.js'
-import bookDetails from '../cmps/book/book-details.cmp.js'
+import noteDetails from '../cmps/book/book-details.cmp.js'
 
 export default {
     template: `
@@ -71,7 +71,7 @@ export default {
     components: {
         bookList: notesList,
         bookFilter: notesFilter,
-        bookDetails,
+        bookDetails: noteDetails,
     },
     created() {
         let booksPrm = notesService.query()
