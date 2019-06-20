@@ -1,5 +1,14 @@
+.home-page {
+    margin-top: 100px;
+    text-align: center;
+}
+
 .home-page h1, .home-page a{
     color: antiquewhite;
+}
+
+.home-page h1 {
+    font-size: 4em;
 }
 
 .home-page a {

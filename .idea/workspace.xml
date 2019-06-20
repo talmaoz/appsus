@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9bb7d03f-645e-401a-a096-d2d822e9a813" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/pages/notes-app.cmp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pages/notes-app.cmp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/about-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/about-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/pages/homepage.cmp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pages/home-page.cmp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/routes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,22 +20,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/cmps/book/book-list.cmp.js">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="124">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/pages/notes-app.cmp.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/cmps/book/book-list.cmp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#55#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="18" selection-start-column="7" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/pages/home-page.cmp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -40,8 +49,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cmps/book/book-preview.cmp.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="341">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="28" />
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/home-page.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/about-page.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -76,6 +115,8 @@
       <find>notes</find>
       <find>bookService</find>
       <find>selectedBook</find>
+      <find>bookDetails</find>
+      <find>book</find>
     </findStrings>
     <replaceStrings>
       <replace>appsus</replace>
@@ -105,7 +146,6 @@
         <option value="$PROJECT_DIR$/js/cmps/book/book-app-header.cmp.js" />
         <option value="$PROJECT_DIR$/js/pages/about.cmp.js" />
         <option value="$PROJECT_DIR$/css/book-app.css" />
-        <option value="$PROJECT_DIR$/css/about-page.css" />
         <option value="$PROJECT_DIR$/js/pages/book-app.cmp.js" />
         <option value="$PROJECT_DIR$/css/book-filter.css" />
         <option value="$PROJECT_DIR$/js/cmps/book/book-filter.cmp.js" />
@@ -114,15 +154,16 @@
         <option value="$PROJECT_DIR$/fsdfsdf.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/app-header.css" />
-        <option value="$PROJECT_DIR$/css/home-page.css" />
         <option value="$PROJECT_DIR$/js/cmps/app-header.cmp.js" />
         <option value="$PROJECT_DIR$/js/pages/homepage.cmp.js" />
-        <option value="$PROJECT_DIR$/js/routes.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/css/app-notes/book-list.css" />
-        <option value="$PROJECT_DIR$/js/cmps/book/book-preview.cmp.js" />
         <option value="$PROJECT_DIR$/js/cmps/book/book-list.cmp.js" />
         <option value="$PROJECT_DIR$/js/pages/notes-app.cmp.js" />
+        <option value="$PROJECT_DIR$/js/cmps/book/book-preview.cmp.js" />
+        <option value="$PROJECT_DIR$/css/home-page.css" />
+        <option value="$PROJECT_DIR$/js/routes.js" />
+        <option value="$PROJECT_DIR$/css/about-page.css" />
       </list>
     </option>
   </component>
@@ -160,6 +201,11 @@
             <path>
               <item name="appsus" type="b2602c69:ProjectViewProjectNode" />
               <item name="appsus" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appsus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appsus" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -167,13 +213,6 @@
               <item name="appsus" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="cmps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appsus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appsus" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="cmps" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="appsus" type="b2602c69:ProjectViewProjectNode" />
@@ -545,11 +584,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561034708065</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="transition from books to notes - WIP 10">
+      <created>1561035035942</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1561035035942</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33209000" />
+    <option name="totallyTimeSpent" value="34123000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -587,7 +633,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&#10;Renamed some more stuff in book-app" />
     <MESSAGE value="Cleaned book-preview car refrences (changed to book, deleted redundant crap)" />
     <MESSAGE value="Seems to be ready to replace the current service with the started service" />
     <MESSAGE value="Seems to be ready to replace the current service with the started service 2" />
@@ -612,7 +657,8 @@
     <MESSAGE value="transition from books to notes - WIP 7" />
     <MESSAGE value="transition from books to notes - WIP 8" />
     <MESSAGE value="transition from books to notes - WIP 9" />
-    <option name="LAST_COMMIT_MESSAGE" value="transition from books to notes - WIP 9" />
+    <MESSAGE value="transition from books to notes - WIP 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="transition from books to notes - WIP 10" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/vue.js">
@@ -631,13 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/cmps/book/book-details.cmp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -662,13 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/about-page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -731,23 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/home-page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#15#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/app-header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -759,13 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/pages/homepage.cmp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -783,6 +791,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/app-notes/book-details.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cmps/book/book-details.cmp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pages/notes-app.cmp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cmps/book/book-preview.cmp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cmps/book/book-list.cmp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pages/home-page.cmp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -793,34 +853,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/app-notes/book-details.css">
+    <entry file="file://$PROJECT_DIR$/css/home-page.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="62">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cmps/book/book-preview.cmp.js">
+    <entry file="file://$PROJECT_DIR$/css/about-page.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/cmps/book/book-list.cmp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/pages/notes-app.cmp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="62">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
