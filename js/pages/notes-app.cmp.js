@@ -1,7 +1,7 @@
 import notesService from '../services/notes.service.js'
 import notesList    from '../cmps/book/book-list.cmp.js'
 import notesFilter  from '../cmps/book/book-filter.cmp.js'
-import noteDetails from '../cmps/book/book-details.cmp.js'
+import noteDetails from '../cmps/book/note-details.cmp.js'
 
 export default {
     template: `
@@ -30,7 +30,7 @@ export default {
                     
                 <note-details
                     v-if="selectedNote"
-                    :book="selectedNote"
+                    :note="selectedNote"
                     @back-to-list="backToList">
                 </note-details>
             </div>
