@@ -3,10 +3,10 @@
 @import './app-header.css';
 @import './about-page.css';
 @import './home-page.css';
-@import './book-app.css';
-@import './book-filter.css';
-@import './book-list.css';
-@import './book-details.css';
+@import './app-notes/book-app.css';
+@import './app-notes/book-filter.css';
+@import './app-notes/book-list.css';
+@import './app-notes/book-details.css';
 
 body {
     padding: 0;
@@ -14,12 +14,10 @@ body {
     background-color: black;
 }
 
-.main-view-container {
-    margin-left: 5px;
-    margin-right: 5px;
+.app-container {
+    margin: 0 20px;
     padding: 8px;
-    border-right: 3px solid #1d2124;
-    border-left : 3px solid #1d2124;
+    background-color: #1d2124;
 }
 
 

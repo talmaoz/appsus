@@ -8,11 +8,11 @@ const myRouter = new VueRouter({ routes: theRoutes })
 var app = new Vue({
     el: '#app',
     template: `
-        <div>
-            <app-header></app-header>
-            <router-view class="main-view-container"></router-view>
-            <footer>coffeerights 2019</footer>
-        </div>
+        <section class="appsus">
+            <app-header class="appsus-header"></app-header>
+            <router-view class="app-container"></router-view>
+            <footer class="appsus-footer">coffeerights 2019</footer>
+        </section>
     `,
     components: {
         bookApp,
