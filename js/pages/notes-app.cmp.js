@@ -5,17 +5,17 @@ import noteDetails from '../cmps/notes/note-details.cmp.js'
 
 export default {
     template: `
-        <section class="book-app">
+        <section class="notes-app">
             
             <h2 
-                class="book-app-inner-container"
-                v-if="booksErr.isErr"
-                >{{booksErr.errMsg}}
+                class="notes-app-inner-container"
+                v-if="notesErr.isErr"
+                >{{notesErr.errMsg}}
             </h2>
             
             <div
-                class="book-app-inner-container"
-                v-if="!booksErr.isErr">
+                class="notes-app-inner-container"
+                v-if="!notesErr.isErr">
                 
                 <notes-filter 
                         v-if="!selectedNote"
@@ -24,7 +24,7 @@ export default {
                     
                 <notes-list 
                     v-if="!selectedNote"
-                    :notes="booksForDisplay"
+                    :notes="notesForDisplay"
                     @note-selected="setSelectedNote">
                 </notes-list>
                     
@@ -41,15 +41,15 @@ export default {
     data() {
         return {
             filter: null,
-            books: [],
+            notes: [],
             selectedNote: null,
-            booksErr: {isErr: false, errMsg: ''},
+            notesErr: {isErr: false, errMsg: ''},
         }
     },
     computed: {
-        booksForDisplay() {
-            if (!this.filter) return this.books;
-            return this.books.filter(book => book.title.includes(this.filter.txt))
+        notesForDisplay() {
+            if (!this.filter) return this.notes;
+            return this.notes.filter(note => note.title.includes(this.filter.txt))
         }
     },
     methods: {
@@ -69,14 +69,14 @@ export default {
         noteDetails,
     },
     created() {
-        let booksPrm = notesService.query()
-        booksPrm
-            .then((booksFromDb) => {
-                this.books = booksFromDb
+        let notesPrm = notesService.query()
+        notesPrm
+            .then((notesFromDb) => {
+                this.notes = notesFromDb
             })
             .catch((serverErr) => {
-                this.booksErr.isErr  = true
-                this.booksErr.errMsg = serverErr
+                this.notesErr.isErr  = true
+                this.notesErr.errMsg = serverErr
             })
     },
 }
