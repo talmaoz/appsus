@@ -1,0 +1,25 @@
+
+/* Components CSS */
+@import './app-header.css';
+@import './about-page.css';
+@import './home-page.css';
+@import './book-app.css';
+@import './book-filter.css';
+@import './book-list.css';
+@import './book-details.css';
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.main-view-container {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 8px;
+    border-right: 3px solid #1d2124;
+    border-left : 3px solid #1d2124;
+}
+
+

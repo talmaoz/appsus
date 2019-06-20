@@ -1,0 +1,8 @@
+.book-app h1, .book-app h2{
+    color: antiquewhite;
+}
+
+.book-app-inner-container {
+    margin-bottom: 76px;
+    padding-top: 76px;
+}

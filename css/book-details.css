@@ -1,0 +1,33 @@
+.book-details {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: antiquewhite;
+    margin: 15px;
+    min-width: 600px;
+    box-shadow: 10px 10px 19px -1px rgba(194,31,91,1);
+}
+
+.book-details button {
+    max-width: 250px;
+    height: 40px;
+}
+
+.book-details h3, .book-details h4 {
+    text-align: center;
+}
+
+.book-details h3 {
+    margin: 3px;
+    font-size: 30px;
+}
+
+.book-details h4 {
+    margin: 2px;
+    font-size: 20px;
+}
+
+.book-details img {
+    width: 350px;
+    margin: 3px auto;
+}
