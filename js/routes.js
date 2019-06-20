@@ -7,5 +7,5 @@ export default [
     { path: '/', component: homepageCmp },
     { path: '/about', component: aboutCmp },
     { path: '/notes', component: notesApp },
-    // { path: '/book/:theBookId', component: noteDetails },
+    // { path: '/notes/:theBookId', component: noteDetails },
 ]
