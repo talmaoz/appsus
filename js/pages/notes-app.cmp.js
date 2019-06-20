@@ -49,8 +49,11 @@ export default {
     computed: {
         notesForDisplay() {
             if (!this.filter) return this.notes;
-            return this.notes.filter(note => note.title.includes(this.filter.txt))
-        }
+            return this.notes.filter(note => {
+                if (note.title && note.title.includes(this.filter.txt)) return true;
+                if (note.txt   && note.txt  .includes(this.filter.txt)) return true;
+            })
+        },
     },
     methods: {
         setFilter(filter) {
@@ -73,6 +76,7 @@ export default {
         notesPrm
             .then((notesFromDb) => {
                 this.notes = notesFromDb
+                // console.log('this.notes = ', this.notes)
             })
             .catch((serverErr) => {
                 this.notesErr.isErr  = true

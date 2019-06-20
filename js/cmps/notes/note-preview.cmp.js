@@ -2,9 +2,12 @@ export default {
     props: ['note'],
     template: `
         <li v-on:click="emitSelectedNote">
-            <h3>{{note.title}}</h3>
-            <h4>{{}} Note content will appear here</h4>
-            <img v-bind:title="note.title" v-bind:src="note.thumbnail">
+            <h3  v-if="note.title">{{note.title}}</h3>
+            <img v-if="note.thumbnail" v-bind:title="note.title" v-bind:src="note.thumbnail">
+            <h4  v-if="note.content">{{note.content}}</h4>
+            <div v-if="note.checkList">
+            
+            </div>
         </li>
     `,
     methods: {
