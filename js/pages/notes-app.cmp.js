@@ -27,7 +27,7 @@ export default {
                     <book-list 
                         v-if="!selectedBook"
                         :books="booksForDisplay"
-                        @book-selected="setSelectedBook"
+                        @note-selected="setSelectedNote"
                     >
                     </book-list>
                         
@@ -60,9 +60,9 @@ export default {
         setFilter(filter) {
             this.filter = filter
         },
-        setSelectedBook(selectedBook) {
-            this.selectedBook = selectedBook
-            console.log('emitSelectedBook =  ', selectedBook)
+        setSelectedNote(selectedNote) {
+            this.selectedBook = selectedNote
+            console.log('emitSelectedBook =  ', selectedNote)
         },
         backToList() {
             this.selectedBook = null

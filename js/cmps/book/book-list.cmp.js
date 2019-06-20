@@ -16,7 +16,7 @@ export default {
     `,
     methods: {
         emitNoteClickedToApp (clickedNote) {
-            this.$emit('book-selected', clickedNote)
+            this.$emit('note-selected', clickedNote)
         },
     },
     components: {
