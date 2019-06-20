@@ -1,4 +1,4 @@
-import bookPreview from './book-preview.cmp.js';
+import bookPreview from './note-preview.cmp.js';
 
 export default {
     props: ['books'],
