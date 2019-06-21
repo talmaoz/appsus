@@ -13,8 +13,8 @@ const SIMULATE_SERVER_ERR            = false
 const SIMULATE_LOCAL_STORAGE_DELETED = true
 // Random data controllers:
 const PROB_OF_TITLE = 50
-const PROB_OF_TXT   = 40
-const PROB_OF_LIST  = 40
+const PROB_OF_TXT   = 45
+const PROB_OF_LIST  = 45
 
 
 function query() {
@@ -61,7 +61,7 @@ function createRandomNote() {
     // PROB_OF_TXT % chance for a plain txt note
     let txt = null
     if (getRandomBool(PROB_OF_TXT)) {
-        txt = makeLorem(getRandomInt(10, 500))
+        txt = makeLorem(getRandomInt(10, 300))
     }
 
     // PROB_OF_LIST % chance for a list note

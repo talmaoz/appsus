@@ -22,7 +22,8 @@
 
 .note-details h3, .note-details h4, .note-details input {
     text-align: center;
-    overflow-wrap: break-word;
+    /*overflow-wrap: break-word;*/
+    word-wrap: break-word
 }
 
 .note-details h3, .inputH3 {

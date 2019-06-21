@@ -10,19 +10,19 @@ export default {
             />
            
             <img 
-                v-if="note.thumbnail"
+                v-if="editedNote.thumbnail"
                 v-bind:title="editedNote.title"
                 v-bind:src="editedNote.thumbnail"
             >
             
             <input
+                v-if="isTxtShown" 
                 class="inputH4"
-                v-if="note.txt" 
                 v-model="editedNote.txt"
                 v-bind:placeholder="txtPlaceholder"
             />
             
-            <ul v-if="note.checkList"> 
+            <ul v-if="editedNote.checkList"> 
                 <li
                     v-bind:key="checkItem"
                     v-for="(checkItem, checkIdx) in note.checkList">
@@ -33,10 +33,13 @@ export default {
     `,
     computed: {
         titlePlaceholder() {
-            return (this.note.title)? '' : 'Title...'
+            return (this.editedNote.title)? '' : 'Title...'
         },
         txtPlaceholder() {
-            return (this.note.txt)? '' : 'Txt...'
+            return (this.editedNote.txt)? '' : 'Txt...'
+        },
+        isTxtShown() {
+            return typeof(this.editedNote.txt)==='string'
         },
     },
     methods: {
