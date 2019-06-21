@@ -25,12 +25,12 @@
     overflow-wrap: break-word;
 }
 
-.note-details h3, .note-details input {
+.note-details h3, .inputH3 {
     margin: 3px;
     font-size: 30px;
 }
 
-.note-details h4 {
+.note-details h4, .inputH4 {
     margin: 2px;
     font-size: 20px;
 }

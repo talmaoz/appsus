@@ -3,18 +3,29 @@ export default {
     template: `
         <div class="note-details">
             <button @click="emitBackToList">Back To Notes List</button>
-            <h3>
-                <input 
-                    v-model="editedNote.title"
-                    v-bind:placeholder="titlePlaceholder"
-                />
-            </h3>
-            <img v-if="note.thumbnail" v-bind:title="note.title" v-bind:src="note.thumbnail">
-            <h4  v-if="note.txt">{{note.txt}}</h4>
+            <input
+                class="inputH3" 
+                v-model="editedNote.title"
+                v-bind:placeholder="titlePlaceholder"
+            />
+           
+            <img 
+                v-if="note.thumbnail"
+                v-bind:title="editedNote.title"
+                v-bind:src="editedNote.thumbnail"
+            >
+            
+            <input
+                class="inputH4"
+                v-if="note.txt" 
+                v-model="editedNote.txt"
+                v-bind:placeholder="txtPlaceholder"
+            />
+            
             <ul v-if="note.checkList"> 
                 <li
                     v-bind:key="checkItem"
-                    v-for="checkItem in note.checkList">
+                    v-for="(checkItem, checkIdx) in note.checkList">
                     - {{checkItem}}
                 </li>
             </ul>
@@ -23,6 +34,9 @@ export default {
     computed: {
         titlePlaceholder() {
             return (this.note.title)? '' : 'Title...'
+        },
+        txtPlaceholder() {
+            return (this.note.txt)? '' : 'Txt...'
         },
     },
     methods: {
@@ -34,6 +48,9 @@ export default {
         return {
             editedNote : this.note,
         }
+    },
+    destroyed() {
+      // TODO - add update of editedNote to DB (currently local storage)
     },
 }
 
