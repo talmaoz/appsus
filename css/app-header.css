@@ -12,7 +12,6 @@
 .header-container h1 {
     color: antiquewhite;
     font-size: 3vh;
-    /*font-family: 'font-logo-1', Fallback, sans-serif;*/
     font-family: 'Nova Mono', monospace, Fallback, sans-serif;
 }
 
@@ -21,7 +20,7 @@
     height: 4vh;
     background-image: url("../img/apps-menu-btn.png");
     background-repeat: no-repeat;
-    background-size: 4vh auto; /* to specify dimensions explicitly */
+    background-size: 4vh auto;
 }
 
 .apps-menu-btn a {
