@@ -1,31 +1,34 @@
+import notesService from '../../services/notes.service.js'
+
 export default {
     props: ['note'],
     template: `
         <div class="note-details">
             <button @click="emitBackToList">Back To Notes List</button>
-            <input
-                class="inputH3" 
+            <textarea 
                 v-model="editedNote.title"
                 v-bind:placeholder="titlePlaceholder"
-            />
-           
+                rows="1" cols="100" class="textarea-h3">
+            </textarea>
+            
             <img 
                 v-if="editedNote.thumbnail"
                 v-bind:title="editedNote.title"
                 v-bind:src="editedNote.thumbnail"
             >
             
-            <input
-                v-if="isTxtShown" 
-                class="inputH4"
+            <textarea
+                v-if="isTxtShown"
                 v-model="editedNote.txt"
                 v-bind:placeholder="txtPlaceholder"
-            />
+                rows="1" cols="100"  
+                class="textarea-h4">
+            </textarea>
             
             <ul v-if="editedNote.checkList"> 
                 <li
                     v-bind:key="checkItem"
-                    v-for="(checkItem, checkIdx) in note.checkList">
+                    v-for="(checkItem, checkIdx) in editedNote.checkList">
                     - {{checkItem}}
                 </li>
             </ul>
@@ -44,6 +47,7 @@ export default {
     },
     methods: {
         emitBackToList () {
+            notesService.updateNote(this.editedNote)
             this.$emit('back-to-list', '')
         },
     },
@@ -53,8 +57,16 @@ export default {
         }
     },
     destroyed() {
-      // TODO - add update of editedNote to DB (currently local storage)
+        notesService.updateNote(this.editedNote)
     },
+    watch: {
+        editedNote: {
+            deep: true,
+            handler() {
+                notesService.updateNote(this.editedNote)
+            }
+        }
+    }
 }
 
 

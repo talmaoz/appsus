@@ -2,7 +2,8 @@ import {storageService} from './storage.service.js'
 import {utilService} from './util.service.js'
 
 export default {
-    query
+    query,
+    updateNote
 }
 
 const NOTES_KEY = 'notes'
@@ -10,43 +11,48 @@ const NOTES_KEY = 'notes'
 // Simulation controllers:
 const SIMULATED_SERVER_DELAY         = 0.001 * 1000
 const SIMULATE_SERVER_ERR            = false
-const SIMULATE_LOCAL_STORAGE_DELETED = true
+const SIMULATE_LOCAL_STORAGE_DELETED = false
 // Random data controllers:
 const PROB_OF_TITLE = 50
 const PROB_OF_TXT   = 45
 const PROB_OF_LIST  = 45
 
+let gNotes
 
 function query() {
-    let notes = storageService.load(NOTES_KEY);
-    if (SIMULATE_LOCAL_STORAGE_DELETED) notes = null
-    if (!notes) {
-        notes = generateNotes();
-        storageService.store(NOTES_KEY, notes)
+    gNotes = storageService.load(NOTES_KEY);
+    if (SIMULATE_LOCAL_STORAGE_DELETED) gNotes = null
+    if (!gNotes) {
+        gNotes = generateNotes();
+        storageService.store(NOTES_KEY, gNotes)
     }
-    if (SIMULATE_SERVER_ERR) notes = null
+    if (SIMULATE_SERVER_ERR) gNotes = null
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
-            if (!notes) {
+            if (!gNotes) {
                 reject(`Couldn't retrieve data from server.`)
             } else {
-                resolve(notes)
+                resolve(gNotes)
             }
         }, SIMULATED_SERVER_DELAY)
     })
 }
 
 function generateNotes() {
-    var notes = []
-    for (let index = 0; index < 20; index++) {
+    let notes = []
+    for (let i = 0; i < utilService.getRandomInt(2,15); i++) {
         notes.push(createRandomNote())
     }
     return notes;
 }
 
+function updateNote(noteToUpdate) {
+    let changedNoteIdx = gNotes.findIndex((note) => note.id === noteToUpdate)
+    gNotes[changedNoteIdx] = noteToUpdate
+    storageService.store(NOTES_KEY, gNotes)
+}
+
 function createRandomNote() {
-
-
 
     let getRandomInt = utilService.getRandomInt
     let makeLorem = utilService.makeLorem

@@ -4,7 +4,9 @@
     padding: 15px;
     background-color: antiquewhite;
     margin: 15px;
-    min-width: 600px;
+    min-width: 400px;
+    min-height: 550px;
+    border-radius: 5px;
 }
 
 .note-details button {
@@ -20,20 +22,22 @@
     border: 3px solid #1d2124;
 }
 
-.note-details h3, .note-details h4, .note-details input {
-    text-align: center;
-    /*overflow-wrap: break-word;*/
+.textarea-h3, .textarea-h4 {
+
     word-wrap: break-word
 }
 
-.note-details h3, .inputH3 {
+.textarea-h3 {
+    text-align: center;
     margin: 3px;
     font-size: 30px;
 }
 
-.note-details h4, .inputH4 {
+.textarea-h4 {
+    text-align: start;
     margin: 2px;
     font-size: 20px;
+    min-height: 400px;
 }
 
 .note-details img {

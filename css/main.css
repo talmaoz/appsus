@@ -58,7 +58,8 @@ body {
     background-color: #1d2124;
 }
 
-input {
+input, textarea {
+    resize: none;
     border:none;
     background-image:none;
     background-color:transparent;
