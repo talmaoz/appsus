@@ -4,10 +4,14 @@ export default {
         <li v-on:click="emitSelectedNote">
             <h3  v-if="note.title">{{note.title}}</h3>
             <img v-if="note.thumbnail" v-bind:title="note.title" v-bind:src="note.thumbnail">
-            <h4  v-if="note.content">{{note.content}}</h4>
-            <div v-if="note.checkList">
-            
-            </div>
+            <h4  v-if="note.txt">{{note.txt}}</h4>
+            <ul v-if="note.checkList"> 
+                <li
+                    v-bind:key="checkItem"
+                    v-for="checkItem in note.checkList">
+                    - {{checkItem}}
+                </li>
+            </ul>
         </li>
     `,
     methods: {

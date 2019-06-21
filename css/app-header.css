@@ -1,25 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono&display=swap');
+/* ^-> To use -> `font-family: 'Nova Mono', monospace, Fallback, sans-serif;`*/
+
 .header-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     padding: 10px 28px;
     margin: 0 auto;
 }
 
 .header-container h1 {
     color: antiquewhite;
-    font-size: 2.5em;
+    font-size: 3vh;
+    /*font-family: 'font-logo-1', Fallback, sans-serif;*/
+    font-family: 'Nova Mono', monospace, Fallback, sans-serif;
 }
 
 .apps-menu-btn {
-    width: 3rem;
-    height: 3rem;
+    width: 4vh;
+    height: 4vh;
     background-image: url("../img/apps-menu-btn.png");
     background-repeat: no-repeat;
-    background-size: 3rem auto; /* to specify dimensions explicitly */
+    background-size: 4vh auto; /* to specify dimensions explicitly */
 }
 
 .apps-menu-btn a {
     width: 100%;
     height: 100%;
 }
+/* =============================================== */
+/* =============================================== */
+/* ==================== Fonts ==================== */
+/* =============================================== */
+/* =============================================== */
+@font-face {
+    font-family: 'font-logo-1';
+    src: url("../font/font-logo-1.ttf");
+}
+
+@font-face {
+    font-family: 'font-logo-2';
+    src: url("../font/font-logo-2.ttf");
+}
+

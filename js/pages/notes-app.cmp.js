@@ -76,7 +76,6 @@ export default {
         notesPrm
             .then((notesFromDb) => {
                 this.notes = notesFromDb
-                // console.log('this.notes = ', this.notes)
             })
             .catch((serverErr) => {
                 this.notesErr.isErr  = true

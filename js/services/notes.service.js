@@ -11,6 +11,11 @@ const NOTES_KEY = 'notes'
 const SIMULATED_SERVER_DELAY         = 0.001 * 1000
 const SIMULATE_SERVER_ERR            = false
 const SIMULATE_LOCAL_STORAGE_DELETED = true
+// Random data controllers:
+const PROB_OF_TITLE = 50
+const PROB_OF_TXT   = 40
+const PROB_OF_LIST  = 40
+
 
 function query() {
     let notes = storageService.load(NOTES_KEY);
@@ -34,42 +39,44 @@ function query() {
 function generateNotes() {
     var notes = []
     for (let index = 0; index < 20; index++) {
-        let note = createRandomNote()
-        notes.push(note)
-
+        notes.push(createRandomNote())
     }
     return notes;
 }
 
 function createRandomNote() {
 
+
+
     let getRandomInt = utilService.getRandomInt
     let makeLorem = utilService.makeLorem
+    let getRandomBool = utilService.getRandomBool
 
-    // 50% chance for a note title
+    // PROB_OF_TITLE % chance for a note title
     let title = null
-    if (getRandomInt(0, 100) < 50) {
+    if (getRandomBool(PROB_OF_TITLE)) {
         title = makeLorem(getRandomInt(5, 40))
     }
 
-    // 40% chance for a plain txt note
+    // PROB_OF_TXT % chance for a plain txt note
     let txt = null
-    if (getRandomInt(0, 100) < 40) {
+    if (getRandomBool(PROB_OF_TXT)) {
         txt = makeLorem(getRandomInt(10, 500))
     }
 
-    // 40% chance for a list note
+    // PROB_OF_LIST % chance for a list note
     let checkList = null
-    if (!txt && getRandomInt(0, 100) < 40) {
+    if (!txt && getRandomBool(PROB_OF_LIST)) {
         checkList = []
         for (let i=0; i<getRandomInt(1,30); i++) {
             checkList.push(makeLorem(getRandomInt(5, 40)))
         }
     }
 
-    // 20% chance for an image note
+    // If note is not a txt nor a list, it'll be an img.
+    // It's approximately `100 - (PROB_OF_LIST + PROB_OF_TXT)` chance.
     let thumbnail = null
-    if (!txt && !checkList) {
+    if ((!txt && !checkList)  ) {
         let imgBaseUrl = 'http://coding-academy.org/books-photos/'
         thumbnail = imgBaseUrl + getRandomInt(1, 21) + '.jpg'
     }
@@ -82,3 +89,4 @@ function createRandomNote() {
         thumbnail: thumbnail,
     }
 }
+

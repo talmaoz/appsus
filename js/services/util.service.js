@@ -1,3 +1,10 @@
+export const utilService = {
+    getRandomInt,
+    makeLorem,
+    makeId,
+    getRandomBool,
+}
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -31,13 +38,6 @@ function makeLorem(length) {
     return randStr;
 }
 
-export const utilService = {
-    getRandomInt,
-    makeLorem,
-    makeId
-}
-
-
 function getRandChar() {
     var LETTERS = 'abcdefghijklmnopqrstuvwxyz';
     var randIndex = parseInt(Math.random() * LETTERS.length)
@@ -52,4 +52,8 @@ function createWord(length) {
     }
 
     return word;
+}
+
+function getRandomBool(trueProb = 50) {
+    return getRandomInt(0, 100) < trueProb
 }
