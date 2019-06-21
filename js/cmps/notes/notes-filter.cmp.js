@@ -1,8 +1,8 @@
 export default {
     template: `
         <section class="notes-filter">
-            <label>Search by Name:</label>
             <input 
+                placeholder="Search for a note..."
                 type="text"
                 v-model="filterBy.txt"
                 @input="emitFilter" 

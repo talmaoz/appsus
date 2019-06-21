@@ -42,12 +42,13 @@ export default {
             return (this.editedNote.txt)? '' : 'Txt...'
         },
         isTxtShown() {
+            // If this.editedNote.txt is null -> return false
+            // If this.editedNote.txt is '' or some other string, return true
             return typeof(this.editedNote.txt)==='string'
         },
     },
     methods: {
         emitBackToList () {
-            notesService.updateNote(this.editedNote)
             this.$emit('back-to-list', '')
         },
     },
@@ -55,9 +56,6 @@ export default {
         return {
             editedNote : this.note,
         }
-    },
-    destroyed() {
-        notesService.updateNote(this.editedNote)
     },
     watch: {
         editedNote: {
