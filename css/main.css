@@ -57,6 +57,16 @@ body {
     margin: 0;
     background-color: #1d2124;
 }
+
+input {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    box-shadow: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
 /* =============================================== */
 /* =============================================== */
 /* =================== Appsus ==================== */
