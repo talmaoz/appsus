@@ -16,10 +16,23 @@ export default {
                     </button>
                 </div>
                 <div class="flex-column-container">
-                        <div class="controllers-container">
-                        <button class="pin-note-btn"      @click="pinNote"     title="Pin Note"    ></button>
-                        <button class="color-pallete-btn" @click="changeColor" title="Change Color"></button>
-                        <button class="delete-btn"        @click="deleteNote"  title="Delete Note" ></button>
+                    <div class="controllers-container">
+                        <button 
+                            class="pin-note-btn"
+                            @click="pinNote"
+                            title="Pin Note"
+                            ref="pin-note-btn">
+                        </button>
+                        <button 
+                            class="color-pallete-btn"
+                            @click="changeColor"
+                            title="Change Color">
+                        </button>
+                        <button 
+                            class="delete-btn"
+                            @click="deleteNote"
+                            title="Delete Note" >
+                        </button>
                     </div>
                 </div> 
             </div>
@@ -77,7 +90,8 @@ export default {
             this.emitBackToList()
         },
         pinNote() {
-            
+            this.note.isPinned = !this.note.isPinned
+
         },
         changeColor() {
             
@@ -95,7 +109,12 @@ export default {
                 notesService.updateNote(this.editedNote)
             }
         }
+    },
+    created() {
+        this.$refs['pin-note-btn'].backgroundImage = getPinBtnImgUrl(this.note.isPinned)
     }
 }
 
-
+function getPinBtnImgUrl(isPinned) {
+    return (isPinned)? `url("../../img/pinned-note.png")` : `url("../../img/unpinned-note.png")`
+}
