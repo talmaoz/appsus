@@ -36,10 +36,10 @@ export default {
     `,
     computed: {
         titlePlaceholder() {
-            return (this.editedNote.title)? '' : 'Title...'
+            return (this.editedNote.title)? '' : 'Title'
         },
         txtPlaceholder() {
-            return (this.editedNote.txt)? '' : 'Txt...'
+            return (this.editedNote.txt)? '' : 'Txt'
         },
         isTxtShown() {
             // If this.editedNote.txt is null -> return false

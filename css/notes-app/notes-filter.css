@@ -4,8 +4,8 @@
 }
 
 .notes-filter input {
-    color: antiquewhite;
+    background-color: var(--app-outer-bg-color);
     min-width: 350px;
-    background-color: #1d2124;
     font-size: 1.2em;
 }
+
