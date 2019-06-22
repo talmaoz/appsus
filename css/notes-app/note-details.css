@@ -36,8 +36,12 @@
     background-image: url("../../img/color-pallete.png");
 }
 
-.pin-note-btn{
+.pin-note-btn-pinned{
     background-image: url("../../img/pinned-note.png");
+}
+
+.pin-note-btn-unpinned{
+    background-image: url("../../img/unpinned-note.png");
 }
 
 .delete-btn {

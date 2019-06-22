@@ -18,9 +18,9 @@ export default {
                 <div class="flex-column-container">
                     <div class="controllers-container">
                         <button 
-                            class="pin-note-btn"
+                            :class="isPinnedClass"
                             @click="pinNote"
-                            title="Pin Note"
+                            :title="pinOrUnpin"
                             ref="pin-note-btn">
                         </button>
                         <button 
@@ -38,29 +38,29 @@ export default {
             </div>
             
             <textarea 
-                v-model="editedNote.title"
+                v-model="note.title"
                 v-bind:placeholder="titlePlaceholder"
                 rows="1" cols="100" class="textarea-h3">
             </textarea>
             
             <img 
-                v-if="editedNote.thumbnail"
-                v-bind:title="editedNote.title"
-                v-bind:src="editedNote.thumbnail"
+                v-if="note.thumbnail"
+                v-bind:title="note.title"
+                v-bind:src="note.thumbnail"
             >
             
             <textarea
                 v-if="isTxtShown"
-                v-model="editedNote.txt"
+                v-model="note.txt"
                 v-bind:placeholder="txtPlaceholder"
                 rows="1" cols="100"  
                 class="textarea-h4">
             </textarea>
             
-            <ul v-if="editedNote.checkList"> 
+            <ul v-if="note.checkList"> 
                 <li
                     v-bind:key="checkItem"
-                    v-for="(checkItem, checkIdx) in editedNote.checkList">
+                    v-for="(checkItem, checkIdx) in note.checkList">
                     - {{checkItem}}
                 </li>
             </ul>
@@ -68,15 +68,24 @@ export default {
     `,
     computed: {
         titlePlaceholder() {
-            return (this.editedNote.title)? '' : 'Title'
+            return (this.note.title) ? '' : 'Title'
         },
         txtPlaceholder() {
-            return (this.editedNote.txt)? '' : 'Txt'
+            return (this.note.txt) ? '' : 'Txt'
         },
         isTxtShown() {
-            // If this.editedNote.txt is null -> return false
-            // If this.editedNote.txt is '' or some other string, return true
-            return typeof(this.editedNote.txt)==='string'
+            // If this.note.txt is null -> return false (note is not of type txt)
+            // If this.note.txt is '' or some other string, return true
+            return typeof (this.note.txt) === 'string'
+        },
+        isPinnedClass() {
+            return {
+                'pin-note-btn-pinned'  : this.note.isPinned,
+                'pin-note-btn-unpinned': !this.note.isPinned,
+            }
+        },
+        pinOrUnpin() {
+            return (this.note.isPinned)? "Note pinned, click to unpin." : "Note unpinned, click to pin."
         },
     },
     methods: {
@@ -85,36 +94,23 @@ export default {
         },
         deleteNote() {
             // TODO - add support to "Are you sure you want to delete this nore?"
-            notesService.deleteNote(this.editedNote.id)
-            eventBus.$emit(NOTE_DELETED, this.editedNote.id);
+            notesService.deleteNote(this.note.id)
+            eventBus.$emit(NOTE_DELETED, this.note.id);
             this.emitBackToList()
         },
         pinNote() {
             this.note.isPinned = !this.note.isPinned
-
         },
         changeColor() {
             
         },
     },
-    data () {
-        return {
-            editedNote : this.note,
-        }
-    },
     watch: {
-        editedNote: {
+        note: {
             deep: true,
             handler() {
-                notesService.updateNote(this.editedNote)
+                notesService.updateNote(this.note)
             }
         }
     },
-    created() {
-        this.$refs['pin-note-btn'].backgroundImage = getPinBtnImgUrl(this.note.isPinned)
-    }
-}
-
-function getPinBtnImgUrl(isPinned) {
-    return (isPinned)? `url("../../img/pinned-note.png")` : `url("../../img/unpinned-note.png")`
 }
