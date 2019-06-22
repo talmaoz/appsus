@@ -1,4 +1,6 @@
 import notesService from '../../services/notes.service.js'
+import eventBus from '../../event-bus.js'
+import {NOTE_DELETED} from '../../event-bus.js'
 
 export default {
     props: ['note'],
@@ -49,7 +51,7 @@ export default {
                     - {{checkItem}}
                 </li>
             </ul>
-        </div>
+        </section>
     `,
     computed: {
         titlePlaceholder() {
@@ -67,6 +69,18 @@ export default {
     methods: {
         emitBackToList () {
             this.$emit('back-to-list', '')
+        },
+        deleteNote() {
+            // TODO - add support to "Are you sure you want to delete this nore?"
+            notesService.deleteNote(this.editedNote.id)
+            eventBus.$emit(NOTE_DELETED, this.editedNote.id);
+            this.emitBackToList()
+        },
+        pinNote() {
+            
+        },
+        changeColor() {
+            
         },
     },
     data () {

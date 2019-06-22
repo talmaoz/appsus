@@ -2,6 +2,8 @@ import notesService from '../services/notes.service.js'
 import notesList    from '../cmps/notes/notes-list.cmp.js'
 import notesFilter  from '../cmps/notes/notes-filter.cmp.js'
 import noteDetails from '../cmps/notes/note-details.cmp.js'
+import eventBus from '../event-bus.js'
+import {NOTE_DELETED} from '../event-bus.js'
 
 export default {
     template: `
@@ -72,6 +74,7 @@ export default {
         noteDetails,
     },
     created() {
+        // Get notes from simulated server:
         let notesPrm = notesService.query()
         notesPrm
             .then((notesFromDb) => {
@@ -81,5 +84,17 @@ export default {
                 this.notesErr.isErr  = true
                 this.notesErr.errMsg = serverErr
             })
+        // Listener for note deleted:
+        eventBus.$on(NOTE_DELETED, (noteToDeletedId) => {
+            const deleteIdx = this.notes.findIndex(note => note.id === noteToDeletedId)
+            if (deleteIdx !== -1) {
+                this.notes.splice(deleteIdx,1)
+            } else {
+                // TODO - add support to if delete failed, then do something
+            }
+        })
     },
+
 }
+
+

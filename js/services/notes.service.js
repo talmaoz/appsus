@@ -3,21 +3,22 @@ import {utilService} from './util.service.js'
 
 export default {
     query,
-    updateNote
+    updateNote,
+    deleteNote,
 }
-
-const NOTES_KEY = 'notes'
 
 // Simulation controllers:
 const SIMULATED_SERVER_DELAY         = 0.001 * 1000
 const SIMULATE_SERVER_ERR            = false
 const SIMULATE_LOCAL_STORAGE_DELETED = false
 // Random data controllers:
-const PROB_OF_TITLE = 50
-const PROB_OF_TXT   = 45
-const PROB_OF_LIST  = 45
-const SIMULATION_NOTES_COUNT = utilService.getRandomInt(10,20)
+const PROB_OF_TITLE  = 50
+const PROB_OF_TXT    = 45
+const PROB_OF_LIST   = 45
+const PROB_OF_PINNED = 60
+const NOTES_COUNT    = 20
 
+const NOTES_KEY = 'notes'
 let gNotes
 
 function query() {
@@ -33,7 +34,8 @@ function query() {
             if (!gNotes) {
                 reject(`Couldn't retrieve data from server.`)
             } else {
-                resolve(gNotes)
+                let notes = JSON.parse(JSON.stringify(gNotes))// Deep copy of gNotes into other array notes
+                resolve(notes)
             }
         }, SIMULATED_SERVER_DELAY)
     })
@@ -41,16 +43,26 @@ function query() {
 
 function generateNotes() {
     let notes = []
-    for (let i = 0; i < SIMULATION_NOTES_COUNT; i++) {
+    for (let i = 0; i < NOTES_COUNT; i++) {
         notes.push(createRandomNote())
     }
     return notes;
 }
 
 function updateNote(noteToUpdate) {
-    let changedNoteIdx = gNotes.findIndex((note) => note.id === noteToUpdate)
+    // TODO - make update server-simulated
+    let changedNoteIdx = gNotes.findIndex((note) => note.id === noteToUpdate.id)
     gNotes[changedNoteIdx] = noteToUpdate
     storageService.store(NOTES_KEY, gNotes)
+}
+
+function deleteNote(noteId) {
+    // TODO - make delete server-simulated
+    const deleteIdx = gNotes.findIndex((note) => note.id === noteId)
+    if (deleteIdx !== -1) {
+        gNotes.splice(deleteIdx,1)
+        return true
+    } else return false;
 }
 
 function createRandomNote() {
@@ -58,6 +70,8 @@ function createRandomNote() {
     let getRandomInt = utilService.getRandomInt
     let makeLorem = utilService.makeLorem
     let getRandomBool = utilService.getRandomBool
+
+    let id = utilService.makeId()
 
     // PROB_OF_TITLE % chance for a note title
     let title = null
@@ -88,12 +102,16 @@ function createRandomNote() {
         thumbnail = imgBaseUrl + getRandomInt(1, 21) + '.jpg'
     }
 
+    let isPinned = false
+    if (getRandomBool(PROB_OF_PINNED)) isPinned = true;
+
     return {
-        id       : utilService.makeId(),
-        title    : title,
-        txt      : txt,
-        checkList: checkList,
-        thumbnail: thumbnail,
+        id,
+        title,
+        txt,
+        checkList,
+        thumbnail,
+        isPinned,
     }
 }
 
