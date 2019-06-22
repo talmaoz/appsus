@@ -3,6 +3,7 @@
 .note-details {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 15px;
     background-color: var(--notes-default-bg-color);
     margin: 15px;
@@ -11,21 +12,39 @@
     border-radius: 5px;
 }
 
-.note-details button {
-    max-width: 250px;
-    height: 40px;
-    color: var(--notes-default-font-color);
-    font-size: 1.5em;
-    border-radius: 10px;
-    box-shadow: inset 0 0 30px var(--app-box-shadow-color);
+.buttons-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.note-details button:hover {
-    border: 3px solid #1d2124;
+.back-to-list-btn {
+    width: 10em;
+    height: 1.5em;
+    font-size: 1.5em;
+}
+
+.controllers-container button {
+    width: 3em;
+    height: 3em;
+    background-repeat: round;
+    background-size: 2em auto;
+}
+
+.color-pallete-btn {
+    background-image: url("../../img/color-pallete.png");
+}
+
+.pin-note-btn{
+    background-image: url("../../img/pin-note.png");
+}
+
+.delete-btn {
+    background-image: url("../../img/delete-note.png");
 }
 
 .textarea-h3, .textarea-h4 {
-    color: var(--notes-default-font-color);
     word-wrap: break-word
 }
 

@@ -3,8 +3,25 @@ import notesService from '../../services/notes.service.js'
 export default {
     props: ['note'],
     template: `
-        <div class="note-details">
-            <button @click="emitBackToList">Back To Notes List</button>
+        <section class="note-details">
+            <div class="buttons-container">
+                <div class="flex-column-container">
+                    <button 
+                        class="back-to-list-btn"
+                        title="Back To Notes List"
+                        @click="emitBackToList">
+                        Back To Notes List
+                    </button>
+                </div>
+                <div class="flex-column-container">
+                        <div class="controllers-container">
+                        <button class="pin-note-btn"      @click="pinNote"     title="Pin Note"    ></button>
+                        <button class="color-pallete-btn" @click="changeColor" title="Change Color"></button>
+                        <button class="delete-btn"        @click="deleteNote"  title="Delete Note" ></button>
+                    </div>
+                </div> 
+            </div>
+            
             <textarea 
                 v-model="editedNote.title"
                 v-bind:placeholder="titlePlaceholder"

@@ -64,11 +64,14 @@ input, textarea {
 /* =============================================== */
 /* =============================================== */
 :root {
-    --app-box-shadow-color     : rgb(163, 66, 197);
-    --app-bg-color             : black;
-    --app-outer-bg-color       : #1d2124;
-    --notes-default-bg-color   : #290426;
-    --notes-default-font-color : antiquewhite;
+    --app-box-shadow-color            : rgb(163, 66, 197);
+    --app-bg-color                    : black;
+    --app-outer-bg-color              : #1d2124;
+    --notes-default-bg-color          : #290426;
+    --notes-default-font-color        : antiquewhite;
+    --notes-button-bg-color           : black;
+    --notes-button-border-color       : #1d2124;
+    --notes-button-border-hover-color : #a0a8a5;
 }
 
 body, html, button  {
@@ -84,10 +87,19 @@ h1{
     text-align: center;
 }
 
-input, textarea, a, h1, h2, h3, h4, h5, h6 {
+input, textarea, button, a, h1, h2, h3, h4, h5, h6 {
     color: var(--notes-default-font-color);
 }
 
+button {
+    border: 4px solid var(--notes-button-border-color);
+    background-color: var(--notes-button-bg-color);
+    border-radius: 10px;
+}
+
+button:hover {
+    border: 4px solid var(--notes-button-border-hover-color);
+}
 a:hover {
     color: var(--app-box-shadow-color);
 }
