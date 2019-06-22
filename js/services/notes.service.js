@@ -11,11 +11,12 @@ const NOTES_KEY = 'notes'
 // Simulation controllers:
 const SIMULATED_SERVER_DELAY         = 0.001 * 1000
 const SIMULATE_SERVER_ERR            = false
-const SIMULATE_LOCAL_STORAGE_DELETED = true
+const SIMULATE_LOCAL_STORAGE_DELETED = false
 // Random data controllers:
 const PROB_OF_TITLE = 50
 const PROB_OF_TXT   = 45
 const PROB_OF_LIST  = 45
+const SIMULATION_NOTES_COUNT = utilService.getRandomInt(10,20)
 
 let gNotes
 
@@ -40,7 +41,7 @@ function query() {
 
 function generateNotes() {
     let notes = []
-    for (let i = 0; i < utilService.getRandomInt(2,15); i++) {
+    for (let i = 0; i < SIMULATION_NOTES_COUNT; i++) {
         notes.push(createRandomNote())
     }
     return notes;
