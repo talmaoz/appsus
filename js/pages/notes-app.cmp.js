@@ -72,6 +72,8 @@ export default {
             this.selectedNote = null
         },
         newNoteAdded(newNote) {
+            this.notes.unshift(newNote)
+            notesService.addNewNote(newNote)
             this.selectedNote = newNote
         },
     },

@@ -12,6 +12,7 @@ export default {
     updateNote,
     deleteNote,
     getEmptyNote,
+    addNewNote,
 }
 
 // Simulation controllers:
@@ -94,6 +95,11 @@ function getEmptyNote(noteType) {
         isPinned  : false               ,
         color     : DEFAULT_COLOR       ,
     }
+}
+
+function addNewNote(newNote) {
+    gNotes.unshift(newNote)
+    storageService.store(NOTES_KEY, gNotes)
 }
 
 function createRandomNote() {

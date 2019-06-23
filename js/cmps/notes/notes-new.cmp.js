@@ -23,7 +23,6 @@ export default {
     methods: {
         emitNewNote(noteType) {
             let emptyNewNote = notesService.getEmptyNote(noteType)
-            console.log('emptyNewNote = ', emptyNewNote)
             this.$emit('new-note', emptyNewNote);
         }
     }
