@@ -22,10 +22,7 @@ export default {
     `,
     methods: {
         updateNoteColor(color) {
-            this.note.color = color
-            notesService.updateNote(this.note)
-            // this.$emit(COLOR_CHANGED, '')
-            this.$emit('color-changed')
+            this.$emit('color-changed', color)
         },
         buttonColor(color) {
             return {

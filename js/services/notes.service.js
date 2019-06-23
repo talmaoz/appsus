@@ -118,7 +118,7 @@ function createRandomNote() {
     let isPinned = false
     if (getRandomBool(PROB_OF_PINNED)) isPinned = true;
 
-    let color = COLORS[getRandomInt(0, COLORS.length)]
+    let color = COLORS[getRandomInt(0, COLORS.length-1)]
 
     return {
         id,

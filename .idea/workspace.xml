@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/cmps/notes/note-color-pallete.cmp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cmps/notes/note-color-pallete.cmp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/cmps/notes/note-details.cmp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cmps/notes/note-details.cmp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/services/notes.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/services/notes.service.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,13 +18,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-details.cmp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
+            <state relative-caret-position="278">
+              <caret line="147" column="32" lean-forward="true" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#3047#3121#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/services/notes.service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="120" column="54" selection-start-line="120" selection-start-column="54" selection-end-line="120" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+                <element signature="n#!!block;n#query#0" />
+                <element signature="n#!!block;n#generateNotes#0" />
+                <element signature="n#!!block;n#updateNote#0" />
+                <element signature="n#!!block;n#deleteNote#0" />
               </folding>
             </state>
           </provider>
@@ -32,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-color-pallete.cmp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+            <state relative-caret-position="692">
+              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -86,10 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>makeLorem</find>
-      <find>thumbnail</find>
-      <find>getRandomInt</find>
-      <find>filter</find>
       <find>v-for</find>
       <find>1d2124</find>
       <find>cons</find>
@@ -98,7 +112,6 @@
       <find>note</find>
       <find>$watch</find>
       <find>updateNote</find>
-      <find>color</find>
       <find>app</find>
       <find>menu</find>
       <find>dele</find>
@@ -113,9 +126,14 @@
       <find>var</find>
       <find>isColorPalleteOpen</find>
       <find>controllers-container</find>
-      <find>noteColor</find>
-      <find>updateNoteColor</find>
       <find>openColorPallete</find>
+      <find>closeColor</find>
+      <find>buttonColor</find>
+      <find>colorChanged</find>
+      <find>color</find>
+      <find>color-changed</find>
+      <find>updateNoteColor</find>
+      <find>noteColor</find>
     </findStrings>
     <replaceStrings>
       <replace>appsus</replace>
@@ -177,10 +195,10 @@
         <option value="$PROJECT_DIR$/js/pages/notes-app.cmp.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/services/util.service.js" />
-        <option value="$PROJECT_DIR$/js/services/notes.service.js" />
         <option value="$PROJECT_DIR$/css/notes-app/note-details.css" />
         <option value="$PROJECT_DIR$/js/cmps/notes/note-color-pallete.cmp.js" />
         <option value="$PROJECT_DIR$/js/cmps/notes/note-details.cmp.js" />
+        <option value="$PROJECT_DIR$/js/services/notes.service.js" />
       </list>
     </option>
   </component>
@@ -330,21 +348,7 @@
       <workItem from="1561022757390" duration="55000" />
       <workItem from="1561022820675" duration="186000" />
       <workItem from="1561023013898" duration="8427000" />
-      <workItem from="1561223072929" duration="11817000" />
-    </task>
-    <task id="LOCAL-00025" summary="WOW - finished book-details including back to list">
-      <created>1560874032523</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1560874032523</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Moving service to async">
-      <created>1560921036731</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1560921036731</updated>
+      <workItem from="1561223072929" duration="13359000" />
     </task>
     <task id="LOCAL-00027" summary="Moved service (and books-app) to async">
       <created>1560923100465</created>
@@ -675,11 +679,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561277710802</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Color pallete almost full support (updates in note-details, but not in note-preview)">
+      <created>1561278325368</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1561278325368</updated>
+    </task>
+    <task id="LOCAL-00075" summary="WIP 1">
+      <created>1561278847999</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1561278847999</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97425000" />
+    <option name="totallyTimeSpent" value="98967000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -717,7 +735,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="transition from books to notes - WIP 4" />
     <MESSAGE value="transition from books to notes - WIP 5" />
     <MESSAGE value="transition from books to notes - WIP 6" />
     <MESSAGE value="transition from books to notes - WIP 7" />
@@ -735,14 +752,15 @@
     <MESSAGE value="Note values in details have Vue-watch on them (local storage is updated immediately with every change we make" />
     <MESSAGE value="- Delete not supported&#10;- gNotes in &quot;server&quot;, now passes a deep copy of it, and not itself&#10;- design fixes and updates" />
     <MESSAGE value="Pin Unpin logic added to notes details" />
-    <MESSAGE value="WIP 1" />
     <MESSAGE value="WIP 2" />
     <MESSAGE value="WIP 3" />
     <MESSAGE value="WIP 4" />
     <MESSAGE value="WIP 5" />
     <MESSAGE value="WIP 6" />
     <MESSAGE value="WIP 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP 7" />
+    <MESSAGE value="Color pallete almost full support (updates in note-details, but not in note-preview)" />
+    <MESSAGE value="WIP 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP 1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/vue.js">
@@ -919,21 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/services/notes.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-            <element signature="n#!!block;n#query#0" />
-            <element signature="n#!!block;n#generateNotes#0" />
-            <element signature="n#!!block;n#updateNote#0" />
-            <element signature="n#!!block;n#deleteNote#0" />
-            <element signature="n#!!block;n#createRandomNote#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-preview.cmp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -964,17 +967,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-color-pallete.cmp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        <state relative-caret-position="692">
+          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-details.cmp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
+        <state relative-caret-position="278">
+          <caret line="147" column="32" lean-forward="true" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#3047#3121#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/services/notes.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="120" column="54" selection-start-line="120" selection-start-column="54" selection-end-line="120" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+            <element signature="n#!!block;n#query#0" />
+            <element signature="n#!!block;n#generateNotes#0" />
+            <element signature="n#!!block;n#updateNote#0" />
+            <element signature="n#!!block;n#deleteNote#0" />
           </folding>
         </state>
       </provider>

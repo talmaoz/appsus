@@ -40,7 +40,7 @@ export default {
                             title="Change Color">
                         </button>
                         <note-color-pallete
-                            v-on:color-changed="toggleColorPallete"
+                            @color-changed="colorChanged"
                             v-bind:note="note"
                             v-if="isColorPalleteOpen"
                             class="color-pallete-container">    
@@ -138,14 +138,18 @@ export default {
         pinNote() {
             this.note.isPinned = !this.note.isPinned
         },
-        changeColor() {
-            
-        },
         toggleColorPallete() {
             this.isColorPalleteOpen = !this.isColorPalleteOpen
         },
         closeColorPallete() {
             this.isColorPalleteOpen = false;
+        },
+        colorChanged(color){
+            console.log(this.note.color)
+            this.note.color = color
+            console.log(this.note.color)
+            notesService.updateNote(this.note)
+            this.toggleColorPallete()
         },
     },
     watch: {
