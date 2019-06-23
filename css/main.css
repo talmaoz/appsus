@@ -67,17 +67,16 @@ input, textarea {
     --app-box-shadow-color            : rgb(163, 66, 197);
     --app-bg-color                    : black;
     --app-outer-bg-color              : #1d2124;
-    --notes-default-bg-color          : #130111;
     --notes-default-font-color        : antiquewhite;
     --notes-button-bg-color           : black;
     --notes-button-border-color       : #1d2124;
     --notes-button-border-hover-color : #a0a8a5;
-    --note-bg-color-blue              : #131340;
-    --note-bg-color-purple            : #290127;
-    --note-bg-color-green             : #002300;
-    --note-bg-color-grey              : #464646;
-    --note-bg-color-yellow            : #29300d;
-    --note-bg-color-brown             : #2b150c;
+    --note-bg-color-blue              : #0f0f29;
+    --note-bg-color-purple            : #130111;
+    --note-bg-color-green             : #001400;
+    --note-bg-color-grey              : #1f1f1f;
+    --note-bg-color-yellow            : #201f01;
+    --note-bg-color-brown             : #1b0d0c;
 }
 
 body, html, button  {
