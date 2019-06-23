@@ -25,7 +25,7 @@ export default {
             this.note.color = color
             notesService.updateNote(this.note)
             // this.$emit(COLOR_CHANGED, '')
-            this.$emit('bla', '')
+            this.$emit('color-changed')
         },
         buttonColor(color) {
             return {

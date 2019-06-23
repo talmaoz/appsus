@@ -36,8 +36,8 @@ export default {
                             @click="toggleColorPallete"
                             title="Change Color">
                         </button>
-                        <note-color-pallete 
-                            @bla="toggleColorPallete"
+                        <note-color-pallete
+                            v-on:color-changed="toggleColorPallete"
                             v-bind:note="note"
                             v-if="isColorPalleteOpen"
                             class="color-pallete-container">    
@@ -134,7 +134,6 @@ export default {
             
         },
         toggleColorPallete() {
-            console.log('this happened')
             this.isColorPalleteOpen = !this.isColorPalleteOpen
         },
     },
@@ -149,4 +148,7 @@ export default {
     components: {
         noteColorPallete,
     },
+    // model: {
+    //     event: COLOR_CHANGED
+    // },
 }
