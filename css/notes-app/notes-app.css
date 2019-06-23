@@ -1,1 +1,27 @@
 @import '../main.css';
+
+.controllers-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5px;
+}
+
+.notes-filter {
+    display: block;
+    /*margin: 5px auto;*/
+    /*width: 350px;*/
+}
+
+.notes-filter input {
+    background-color: var(--app-outer-bg-color);
+    width: 350px;
+    font-size: 1.2em;
+}
+
+.notes-new {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    /*margin: 5px auto;*/
+}

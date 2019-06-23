@@ -23,6 +23,7 @@ export default {
                     v-if="!selectedNote"
                     class="controllers-container">
                     <notes-filter 
+                        class="flex-column-container"
                         @set-filter="setFilter">    
                     </notes-filter>
                     <notes-new
