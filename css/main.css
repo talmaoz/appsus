@@ -2,9 +2,9 @@
 @import './app-header.css';
 @import './about-page.css';
 @import './home-page.css';
-@import 'notes-app/notes-app.css';
-@import 'notes-app/notes-list.css';
-@import 'notes-app/note-details.css';
+@import 'notes/notes-app.css';
+@import 'notes/notes-list.css';
+@import 'notes/note-details.css';
 
 /* =============================================== */
 /* =============================================== */
