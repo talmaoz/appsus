@@ -7,15 +7,6 @@ import {COLOR_GREY  } from '../cmps/notes/note-color-pallete.cmp.js'
 import {COLOR_YELLOW} from '../cmps/notes/note-color-pallete.cmp.js'
 import {COLOR_BROWN } from '../cmps/notes/note-color-pallete.cmp.js'
 
-const COLORS = [
-    COLOR_BLUE  ,
-    COLOR_PURPLE,
-    COLOR_GREEN ,
-    COLOR_GREY  ,
-    COLOR_YELLOW,
-    COLOR_BROWN ,
-]
-
 export default {
     query,
     updateNote,
@@ -25,7 +16,7 @@ export default {
 // Simulation controllers:
 const SIMULATED_SERVER_DELAY         = 0.001 * 1000
 const SIMULATE_SERVER_ERR            = false
-const SIMULATE_LOCAL_STORAGE_DELETED = false
+const SIMULATE_LOCAL_STORAGE_DELETED = true
 // Random data controllers:
 const PROB_OF_TITLE  = 50
 const PROB_OF_TXT    = 45
@@ -81,7 +72,14 @@ function deleteNote(noteId) {
 }
 
 function createRandomNote() {
-
+    const COLORS = [
+        COLOR_BLUE  ,
+        COLOR_PURPLE,
+        COLOR_GREEN ,
+        COLOR_GREY  ,
+        COLOR_YELLOW,
+        COLOR_BROWN ,
+    ]
     let getRandomInt = utilService.getRandomInt
     let makeLorem = utilService.makeLorem
     let getRandomBool = utilService.getRandomBool

@@ -79,7 +79,7 @@ export default {
     `,
     data() {
         return {
-            openColorPallete : false,
+            isColorPalleteOpen : false,
         }
     },
     computed: {
@@ -102,9 +102,6 @@ export default {
         },
         pinOrUnpin() {
             return (this.note.isPinned)? "Note pinned, click to unpin." : "Note unpinned, click to pin."
-        },
-        isColorPalleteOpen () {
-            return this.openColorPallete
         },
         noteColor() {
             return {
@@ -134,7 +131,7 @@ export default {
             
         },
         openColorPallete() {
-            this.openColorPallete = true
+            this.isColorPalleteOpen = true
         },
     },
     watch: {

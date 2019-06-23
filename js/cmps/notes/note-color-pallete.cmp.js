@@ -1,4 +1,4 @@
-import notesService from "../../services/notes.service";
+import notesService from "../../services/notes.service.js";
 
 export const COLOR_BLUE   = 'blue'
 export const COLOR_PURPLE = 'purple'
@@ -14,7 +14,7 @@ export default {
                <button
                     v-for="color in COLORS"
                     v-on:click="updateNoteColor(color)"
-                    v-bind:key="currentColor">
+                    v-bind:key="color">
                </button>
         </section>
     `,
