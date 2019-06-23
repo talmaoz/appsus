@@ -75,6 +75,7 @@ export default {
             this.notes.unshift(newNote)
             notesService.addNewNote(newNote)
             this.selectedNote = newNote
+            console.log('this.selectedNote = ', this.selectedNote)
         },
     },
     components: {
