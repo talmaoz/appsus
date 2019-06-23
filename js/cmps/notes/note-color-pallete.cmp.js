@@ -21,6 +21,7 @@ export default {
     methods: {
         updateNoteColor(color) {
             this.note.color = color
+            console.log('note-color-pallete: this.note.color = ', this.note.color = color)
             notesService.updateNote(this.note)
         },
     },

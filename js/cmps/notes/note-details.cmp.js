@@ -35,7 +35,8 @@ export default {
                             @click="openColorPallete"
                             title="Change Color">
                         </button>
-                        <note-color-pallete
+                        <note-color-pallete 
+                            v-bind:note="note"
                             v-if="isColorPalleteOpen"
                             class="color-pallete-container">    
                         </note-color-pallete>

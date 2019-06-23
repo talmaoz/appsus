@@ -16,7 +16,7 @@ export default {
 // Simulation controllers:
 const SIMULATED_SERVER_DELAY         = 0.001 * 1000
 const SIMULATE_SERVER_ERR            = false
-const SIMULATE_LOCAL_STORAGE_DELETED = true
+const SIMULATE_LOCAL_STORAGE_DELETED = false
 // Random data controllers:
 const PROB_OF_TITLE  = 50
 const PROB_OF_TXT    = 45

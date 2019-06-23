@@ -25,16 +25,27 @@
     font-size: 1.5em;
 }
 
-.controllers-container button {
+.controllers-container button, .color-pallete-container button{
     width: 3em;
     height: 3em;
     background-repeat: round;
     background-size: 2em auto;
+    position: relative;
 }
 
 .color-pallete-btn {
     background-image: url("../../img/color-pallete.png");
 }
+
+.color-pallete-container {
+    position: absolute;
+    top: 45px;
+}
+
+.color-pallete-container button{
+    margin: 2px;
+}
+
 
 .pin-note-btn-pinned{
     background-image: url("../../img/pinned-note.png");
