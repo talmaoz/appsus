@@ -1,4 +1,11 @@
 import notePreview from './note-preview.cmp.js';
+import {COLOR_BLUE   } from './note-color-pallete.cmp.js'
+import {COLOR_PURPLE } from './note-color-pallete.cmp.js'
+import {COLOR_GREEN  } from './note-color-pallete.cmp.js'
+import {COLOR_GREY   } from './note-color-pallete.cmp.js'
+import {COLOR_YELLOW } from './note-color-pallete.cmp.js'
+import {COLOR_BROWN  } from './note-color-pallete.cmp.js'
+
 
 export default {
     props: ['notes'],

@@ -16,7 +16,7 @@ export default {
 // Simulation controllers:
 const SIMULATED_SERVER_DELAY         = 0.001 * 1000
 const SIMULATE_SERVER_ERR            = false
-const SIMULATE_LOCAL_STORAGE_DELETED = false
+const SIMULATE_LOCAL_STORAGE_DELETED = true
 // Random data controllers:
 const PROB_OF_TITLE  = 50
 const PROB_OF_TXT    = 45
@@ -118,7 +118,7 @@ function createRandomNote() {
     let isPinned = false
     if (getRandomBool(PROB_OF_PINNED)) isPinned = true;
 
-    let color = COLORS[getRandomInt(0, COLORS.length-1)]
+    let color = COLORS[getRandomInt(0, COLORS.length-1 )]
 
     return {
         id,

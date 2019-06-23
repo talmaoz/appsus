@@ -2,7 +2,6 @@ import notesService from '../../services/notes.service.js'
 import eventBus from '../../event-bus.js'
 import {NOTE_DELETED} from '../../event-bus.js'
 import noteColorPallete from './note-color-pallete.cmp.js';
-import {COLOR_CHANGED} from './note-color-pallete.cmp.js'
 import {COLOR_BLUE   } from './note-color-pallete.cmp.js'
 import {COLOR_PURPLE } from './note-color-pallete.cmp.js'
 import {COLOR_GREEN  } from './note-color-pallete.cmp.js'
@@ -163,7 +162,4 @@ export default {
     components: {
         noteColorPallete,
     },
-    // model: {
-    //     event: COLOR_CHANGED
-    // },
 }

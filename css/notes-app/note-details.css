@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
-    background-color: var(--notes-default-bg-color);
     margin: 15px;
     min-width: 400px;
     min-height: 550px;

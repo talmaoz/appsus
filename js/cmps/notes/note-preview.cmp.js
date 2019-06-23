@@ -1,7 +1,16 @@
+import {COLOR_BLUE   } from './note-color-pallete.cmp.js'
+import {COLOR_PURPLE } from './note-color-pallete.cmp.js'
+import {COLOR_GREEN  } from './note-color-pallete.cmp.js'
+import {COLOR_GREY   } from './note-color-pallete.cmp.js'
+import {COLOR_YELLOW } from './note-color-pallete.cmp.js'
+import {COLOR_BROWN  } from './note-color-pallete.cmp.js'
+
 export default {
     props: ['note'],
     template: `
-        <li v-on:click="emitSelectedNote">
+        <li 
+            :class="noteColor"
+            v-on:click="emitSelectedNote">
             <h3  v-if="note.title">{{note.title}}</h3>
             <img v-if="note.thumbnail" v-bind:title="note.title" v-bind:src="note.thumbnail">
             <h4  v-if="note.txt">{{note.txt}}</h4>
@@ -20,5 +29,18 @@ export default {
             this.$emit('note-clicked', this.note)
         },
     },
+    computed: {
+        noteColor() {
+            return {
+                'note-color-blue  ' : this.note.color === COLOR_BLUE  ,
+                'note-color-purple' : this.note.color === COLOR_PURPLE,
+                'note-color-green ' : this.note.color === COLOR_GREEN ,
+                'note-color-grey  ' : this.note.color === COLOR_GREY  ,
+                'note-color-yellow' : this.note.color === COLOR_YELLOW,
+                'note-color-brown ' : this.note.color === COLOR_BROWN ,
+            }
+        },
+    },
+
 }
 
