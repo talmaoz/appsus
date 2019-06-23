@@ -40,6 +40,9 @@
 .color-pallete-container {
     position: absolute;
     top: 45px;
+    left: 42px;
+    display: flex;
+    flex-direction: column;
 }
 
 .color-pallete-container button{
