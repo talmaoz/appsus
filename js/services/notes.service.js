@@ -61,7 +61,7 @@ function generateNotes() {
 function updateNote(noteToUpdate) {
     // TODO - make update server-simulated
     let changedNoteIdx = gNotes.findIndex((note) => note.id === noteToUpdate.id)
-    gNotes[changedNoteIdx] = noteToUpdate
+    gNotes.splice(changedNoteIdx, 1, noteToUpdate)
     storageService.store(NOTES_KEY, gNotes)
 }
 
@@ -70,6 +70,7 @@ function deleteNote(noteId) {
     const deleteIdx = gNotes.findIndex((note) => note.id === noteId)
     if (deleteIdx !== -1) {
         gNotes.splice(deleteIdx,1)
+        storageService.store(NOTES_KEY, gNotes)
         return true
     } else return false;
 }

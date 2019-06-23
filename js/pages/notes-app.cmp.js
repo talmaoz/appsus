@@ -100,11 +100,10 @@ export default {
             const deleteIdx = this.notes.findIndex(note => note.id === noteToDeletedId)
             if (deleteIdx !== -1) {
                 this.notes.splice(deleteIdx,1)
+                notesService.deleteNote(noteToDeletedId)
             } else {
                 // TODO - add support to if delete failed, then do something
             }
         })
     },
 }
-
-

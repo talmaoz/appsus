@@ -26,6 +26,7 @@ export default {
     methods: {
         emitSelectedNote() {
             // TODO - move emit logic to bus logic, since currently it emits from note-preview, to note-list, then from note-list to note-app... I want it to emit directly to the app
+            // console.log('')
             this.$emit('note-clicked', this.note)
         },
     },

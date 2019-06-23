@@ -130,7 +130,6 @@ export default {
         },
         deleteNote() {
             // TODO - add support to "Are you sure you want to delete this nore?"
-            notesService.deleteNote(this.note.id)
             eventBus.$emit(NOTE_DELETED, this.note.id);
             this.emitBackToList()
         },
@@ -144,9 +143,7 @@ export default {
             this.isColorPalleteOpen = false;
         },
         colorChanged(color){
-            console.log(this.note.color)
             this.note.color = color
-            console.log(this.note.color)
             notesService.updateNote(this.note)
             this.toggleColorPallete()
         },
