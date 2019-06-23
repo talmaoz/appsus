@@ -76,15 +76,15 @@ export default {
                 @click="closeColorPallete">
             </textarea>
             
-            <ul 
+            <div 
                 v-if="note.checkList"
-                @click="closeColorPallete"> 
-                <li
-                    v-bind:key="checkItem"
-                    v-for="(checkItem, checkIdx) in note.checkList">
-                    - {{checkItem}}
-                </li>
-            </ul>
+                class="textarea-h4"> 
+                <input
+                    v-for="(checkItem, checkIdx) in note.checkList"
+                    v-bind:key="checkIdx"
+                    v-model="note.checkList[checkIdx]"
+                />
+            </div>
         </section>
     `,
     data() {

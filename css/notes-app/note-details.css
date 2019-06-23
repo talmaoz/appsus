@@ -78,6 +78,13 @@
     min-height: 400px;
 }
 
+.textarea-h4 input {
+    display: block;
+    margin: 2px;
+    font-size: 20px;
+    width: 100%;
+}
+
 .note-details img {
     width: 350px;
     margin: 3px auto;

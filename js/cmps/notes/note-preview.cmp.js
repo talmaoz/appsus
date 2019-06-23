@@ -16,8 +16,8 @@ export default {
             <h4  v-if="note.txt">{{note.txt}}</h4>
             <ul v-if="note.checkList"> 
                 <li
-                    v-bind:key="checkItem"
-                    v-for="checkItem in note.checkList">
+                    v-for="(checkItem, checkIdx) in note.checkList"
+                    v-bind:key="checkIdx">
                     - {{checkItem}}
                 </li>
             </ul>
@@ -26,7 +26,8 @@ export default {
     methods: {
         emitSelectedNote() {
             // TODO - move emit logic to bus logic, since currently it emits from note-preview, to note-list, then from note-list to note-app... I want it to emit directly to the app
-            // console.log('')
+            // TODO - when a note is clicked - update it's lastUpdateTime field (add support for this field), and then in the note-clicked event, sort notes by lastUpdateTime
+            console.log('this.note(note-preview) = ', this.note)
             this.$emit('note-clicked', this.note)
         },
     },
