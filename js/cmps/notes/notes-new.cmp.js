@@ -6,12 +6,10 @@ export default {
             <button 
                 v-on:click="emitNewNote('txt-note')"
                 class="new-txt-note-btn">
-                    TXT
             </button>
             <button 
                 v-on:click="emitNewNote('checklist-note')"
                 class="new-checklist-note-btn">
-                    CHECKLIST
             </button>
             <button 
                 v-on:click="emitNewNote('img-note')"

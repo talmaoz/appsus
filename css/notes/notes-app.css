@@ -9,8 +9,6 @@
 
 .notes-filter {
     display: block;
-    /*margin: 5px auto;*/
-    /*width: 350px;*/
 }
 
 .notes-filter input {
@@ -23,5 +21,24 @@
     width: 150px;
     display: flex;
     justify-content: space-between;
-    /*margin: 5px auto;*/
+}
+
+.notes-new button {
+    width: 3em;
+    height: 3em;
+    background-repeat: round;
+    background-size: 2em auto;
+    position: relative;
+}
+
+.new-txt-note-btn {
+     background-image: url("../../img/txt-note.png");
+}
+
+.new-checklist-note-btn {
+    background-image: url("../../img/checklist-note.png");
+}
+
+.new-img-note-btn{
+    background-image: url("../../img/img-note.png");
 }
