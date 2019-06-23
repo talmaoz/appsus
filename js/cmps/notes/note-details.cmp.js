@@ -2,12 +2,13 @@ import notesService from '../../services/notes.service.js'
 import eventBus from '../../event-bus.js'
 import {NOTE_DELETED} from '../../event-bus.js'
 import noteColorPallete from './note-color-pallete.cmp.js';
-import {COLOR_BLUE  } from './note-color-pallete.cmp.js'
-import {COLOR_PURPLE} from './note-color-pallete.cmp.js'
-import {COLOR_GREEN } from './note-color-pallete.cmp.js'
-import {COLOR_GREY  } from './note-color-pallete.cmp.js'
-import {COLOR_YELLOW} from './note-color-pallete.cmp.js'
-import {COLOR_BROWN } from './note-color-pallete.cmp.js'
+import {COLOR_CHANGED} from './note-color-pallete.cmp.js'
+import {COLOR_BLUE   } from './note-color-pallete.cmp.js'
+import {COLOR_PURPLE } from './note-color-pallete.cmp.js'
+import {COLOR_GREEN  } from './note-color-pallete.cmp.js'
+import {COLOR_GREY   } from './note-color-pallete.cmp.js'
+import {COLOR_YELLOW } from './note-color-pallete.cmp.js'
+import {COLOR_BROWN  } from './note-color-pallete.cmp.js'
 
 export default {
     props: ['note'],
@@ -32,10 +33,11 @@ export default {
                         </button>
                         <button 
                             class="color-pallete-btn"
-                            @click="openColorPallete"
+                            @click="toggleColorPallete"
                             title="Change Color">
                         </button>
                         <note-color-pallete 
+                            @bla="toggleColorPallete"
                             v-bind:note="note"
                             v-if="isColorPalleteOpen"
                             class="color-pallete-container">    
@@ -131,8 +133,9 @@ export default {
         changeColor() {
             
         },
-        openColorPallete() {
-            this.isColorPalleteOpen = true
+        toggleColorPallete() {
+            console.log('this happened')
+            this.isColorPalleteOpen = !this.isColorPalleteOpen
         },
     },
     watch: {

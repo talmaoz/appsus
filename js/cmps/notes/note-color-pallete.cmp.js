@@ -1,5 +1,6 @@
 import notesService from "../../services/notes.service.js";
 
+export const COLOR_CHANGED ='color-changed'
 export const COLOR_BLUE   = 'blue'
 export const COLOR_PURPLE = 'purple'
 export const COLOR_GREEN  = 'green'
@@ -23,6 +24,8 @@ export default {
         updateNoteColor(color) {
             this.note.color = color
             notesService.updateNote(this.note)
+            // this.$emit(COLOR_CHANGED, '')
+            this.$emit('bla', '')
         },
         buttonColor(color) {
             return {
