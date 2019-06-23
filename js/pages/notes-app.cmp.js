@@ -19,11 +19,13 @@ export default {
                 class="notes-app-inner-container"
                 v-if="!notesErr.isErr">
                 
-                <notes-filter 
-                        v-if="!selectedNote"
-                        @set-filter="setFilter">    
-                </notes-filter>
-                    
+                <section class="controllers-container">
+                    <notes-filter 
+                            v-if="!selectedNote"
+                            @set-filter="setFilter">    
+                    </notes-filter>
+                </section>
+                
                 <notes-list 
                     v-if="!selectedNote"
                     :notes="notesForDisplay"
