@@ -91,7 +91,7 @@ h1{
     text-align: center;
 }
 
-input, textarea, button, a, h1, h2, h3, h4, h5, h6 {
+input, textarea, button, a, h1, h2, h3, h4, h5, h6, p {
     color: var(--notes-default-font-color);
     font-family: 'font-logo-3', Fallback, sans-serif;
 }
