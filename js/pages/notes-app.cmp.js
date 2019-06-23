@@ -1,6 +1,7 @@
 import notesService from '../services/notes.service.js'
-import notesList    from '../cmps/notes/notes-list.cmp.js'
 import notesFilter  from '../cmps/notes/notes-filter.cmp.js'
+import notesNew from '../cmps/notes/notes-new.cmp.js'
+import notesList    from '../cmps/notes/notes-list.cmp.js'
 import noteDetails from '../cmps/notes/note-details.cmp.js'
 import eventBus from '../event-bus.js'
 import {NOTE_DELETED} from '../event-bus.js'
@@ -8,7 +9,6 @@ import {NOTE_DELETED} from '../event-bus.js'
 export default {
     template: `
         <section class="notes-app">
-            
             <h2 
                 class="notes-app-inner-container"
                 v-if="notesErr.isErr"
@@ -19,11 +19,15 @@ export default {
                 class="notes-app-inner-container"
                 v-if="!notesErr.isErr">
                 
-                <section class="controllers-container">
+                <section 
+                    v-if="!selectedNote"
+                    class="controllers-container">
                     <notes-filter 
-                            v-if="!selectedNote"
-                            @set-filter="setFilter">    
+                        @set-filter="setFilter">    
                     </notes-filter>
+                    <notes-new
+                        @new-note="newNoteAdded">
+                    </notes-new>
                 </section>
                 
                 <notes-list 
@@ -38,8 +42,6 @@ export default {
                     @back-to-list="backToList">
                 </note-details>
             </div>
-            
-                
         </section>
     `,
     data() {
@@ -69,10 +71,14 @@ export default {
         backToList() {
             this.selectedNote = null
         },
+        newNoteAdded(newNote) {
+            this.selectedNote = newNote
+        },
     },
     components: {
-        notesList,
         notesFilter,
+        notesNew,
+        notesList,
         noteDetails,
     },
     created() {
@@ -96,7 +102,6 @@ export default {
             }
         })
     },
-
 }
 
 

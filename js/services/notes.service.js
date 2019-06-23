@@ -11,6 +11,7 @@ export default {
     query,
     updateNote,
     deleteNote,
+    getEmptyNote,
 }
 
 // Simulation controllers:
@@ -25,6 +26,7 @@ const PROB_OF_PINNED = 60
 const NOTES_COUNT    = 20
 
 const NOTES_KEY = 'notes'
+const DEFAULT_COLOR = COLOR_PURPLE
 let gNotes
 
 function query() {
@@ -69,6 +71,29 @@ function deleteNote(noteId) {
         gNotes.splice(deleteIdx,1)
         return true
     } else return false;
+}
+
+function getEmptyNote(noteType) {
+
+    let txt = null
+    if (noteType === 'txt-note') txt = ''
+
+    let checkList = null
+    if (noteType === 'checklist-note') checkList = []
+
+    let thumbnail = null
+    if (noteType === 'img-note') thumbnail = ''
+
+    return {
+        // TODO - add validation that randomly created ID does not already exist in gNotes
+        id        : utilService.makeId(),
+        title     : null                ,
+        txt       : txt                 ,
+        checkList : checkList           ,
+        thumbnail : thumbnail           ,
+        isPinned  : false               ,
+        color     : DEFAULT_COLOR       ,
+    }
 }
 
 function createRandomNote() {

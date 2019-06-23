@@ -1,24 +1,30 @@
+import notesService from '../../services/notes.service.js'
+
 export default {
     template: `
-        <section class="notes-filter">
-            <input 
-                placeholder="Search for a note..."
-                type="text"
-                v-model="filterBy.txt"
-                @input="emitFilter" 
-            />
+        <section class="notes-new">
+            <button 
+                v-on:click="emitNewNote('txt-note')"
+                class="new-txt-note-btn">
+                    TXT
+            </button>
+            <button 
+                v-on:click="emitNewNote('checklist-note')"
+                class="new-checklist-note-btn">
+                    CHECKLIST
+            </button>
+            <button 
+                v-on:click="emitNewNote('img-note')"
+                class="new-img-note-btn">
+                    IMG
+            </button>
         </section>
     `,
-    data() {
-        return {
-            filterBy: {
-                txt: ''
-            }
-        }
-    },
     methods: {
-        emitFilter() {
-            this.$emit('set-filter', this.filterBy);
+        emitNewNote(noteType) {
+            let emptyNewNote = notesService.getEmptyNote(noteType)
+            console.log('emptyNewNote = ', emptyNewNote)
+            this.$emit('new-note', emptyNewNote);
         }
     }
 }
