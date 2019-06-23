@@ -13,6 +13,7 @@ export default {
         <section>
                <button
                     v-for="color in COLORS"
+                    :class="buttonColor(color)"
                     v-on:click="updateNoteColor(color)"
                     v-bind:key="color">
                </button>
@@ -22,6 +23,16 @@ export default {
         updateNoteColor(color) {
             this.note.color = color
             notesService.updateNote(this.note)
+        },
+        buttonColor(color) {
+            return {
+                'note-color-blue  ' : color === COLOR_BLUE  ,
+                'note-color-purple' : color === COLOR_PURPLE,
+                'note-color-green ' : color === COLOR_GREEN ,
+                'note-color-grey  ' : color === COLOR_GREY  ,
+                'note-color-yellow' : color === COLOR_YELLOW,
+                'note-color-brown ' : color === COLOR_BROWN ,
+            }
         },
     },
     data() {
