@@ -69,3 +69,22 @@
     width: 350px;
     margin: 3px auto;
 }
+
+.note-color-blue   {background-color: var(--note-bg-color-blue)}
+.note-color-purple {background-color: var(--note-bg-color-purple)}
+.note-color-green  {background-color: var(--note-bg-color-green)}
+.note-color-grey   {background-color: var(--note-bg-color-grey)}
+.note-color-yellow {background-color: var(--note-bg-color-yellow)}
+.note-color-brown  {background-color: var(--note-bg-color-brown)}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -72,6 +72,12 @@ input, textarea {
     --notes-button-bg-color           : black;
     --notes-button-border-color       : #1d2124;
     --notes-button-border-hover-color : #a0a8a5;
+    --note-bg-color-blue              : midnightblue;
+    --note-bg-color-purple            : #130111;
+    --note-bg-color-green             : #003b00;
+    --note-bg-color-grey              : #464646;
+    --note-bg-color-yellow            : #545c11;
+    --note-bg-color-brown             : #5a2d11;
 }
 
 body, html, button  {

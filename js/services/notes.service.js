@@ -1,5 +1,20 @@
 import {storageService} from './storage.service.js'
 import {utilService} from './util.service.js'
+import {COLOR_BLUE  } from '../cmps/notes/note-color-pallete.cmp.js'
+import {COLOR_PURPLE} from '../cmps/notes/note-color-pallete.cmp.js'
+import {COLOR_GREEN } from '../cmps/notes/note-color-pallete.cmp.js'
+import {COLOR_GREY  } from '../cmps/notes/note-color-pallete.cmp.js'
+import {COLOR_YELLOW} from '../cmps/notes/note-color-pallete.cmp.js'
+import {COLOR_BROWN } from '../cmps/notes/note-color-pallete.cmp.js'
+
+const COLORS = [
+    COLOR_BLUE  ,
+    COLOR_PURPLE,
+    COLOR_GREEN ,
+    COLOR_GREY  ,
+    COLOR_YELLOW,
+    COLOR_BROWN ,
+]
 
 export default {
     query,
@@ -105,6 +120,8 @@ function createRandomNote() {
     let isPinned = false
     if (getRandomBool(PROB_OF_PINNED)) isPinned = true;
 
+    let color = COLORS[getRandomInt(0, COLORS.length)]
+
     return {
         id,
         title,
@@ -112,6 +129,7 @@ function createRandomNote() {
         checkList,
         thumbnail,
         isPinned,
+        color,
     }
 }
 

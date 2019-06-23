@@ -1,11 +1,18 @@
 import notesService from '../../services/notes.service.js'
 import eventBus from '../../event-bus.js'
 import {NOTE_DELETED} from '../../event-bus.js'
+import noteColorPallete from './note-color-pallete.cmp.js';
+import {COLOR_BLUE  } from './note-color-pallete.cmp.js'
+import {COLOR_PURPLE} from './note-color-pallete.cmp.js'
+import {COLOR_GREEN } from './note-color-pallete.cmp.js'
+import {COLOR_GREY  } from './note-color-pallete.cmp.js'
+import {COLOR_YELLOW} from './note-color-pallete.cmp.js'
+import {COLOR_BROWN } from './note-color-pallete.cmp.js'
 
 export default {
     props: ['note'],
     template: `
-        <section class="note-details">
+        <section class="note-details" :class="noteColor">
             <div class="buttons-container">
                 <div class="flex-column-container">
                     <button 
@@ -25,9 +32,13 @@ export default {
                         </button>
                         <button 
                             class="color-pallete-btn"
-                            @click="changeColor"
+                            @click="openColorPallete"
                             title="Change Color">
                         </button>
+                        <note-color-pallete
+                            v-if="isColorPalleteOpen"
+                            class="color-pallete-container">    
+                        </note-color-pallete>
                         <button 
                             class="delete-btn"
                             @click="deleteNote"
@@ -66,6 +77,11 @@ export default {
             </ul>
         </section>
     `,
+    data() {
+        return {
+            openColorPallete : false,
+        }
+    },
     computed: {
         titlePlaceholder() {
             return (this.note.title) ? '' : 'Title'
@@ -87,6 +103,19 @@ export default {
         pinOrUnpin() {
             return (this.note.isPinned)? "Note pinned, click to unpin." : "Note unpinned, click to pin."
         },
+        isColorPalleteOpen () {
+            return this.openColorPallete
+        },
+        noteColor() {
+            return {
+                'note-color-blue  ' : this.note.color === COLOR_BLUE  ,
+                'note-color-purple' : this.note.color === COLOR_PURPLE,
+                'note-color-green ' : this.note.color === COLOR_GREEN ,
+                'note-color-grey  ' : this.note.color === COLOR_GREY  ,
+                'note-color-yellow' : this.note.color === COLOR_YELLOW,
+                'note-color-brown ' : this.note.color === COLOR_BROWN ,
+            }
+        },
     },
     methods: {
         emitBackToList () {
@@ -104,6 +133,9 @@ export default {
         changeColor() {
             
         },
+        openColorPallete() {
+            this.openColorPallete = true
+        },
     },
     watch: {
         note: {
@@ -112,5 +144,8 @@ export default {
                 notesService.updateNote(this.note)
             }
         }
+    },
+    components: {
+        noteColorPallete,
     },
 }

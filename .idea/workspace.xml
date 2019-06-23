@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb7d03f-645e-401a-a096-d2d822e9a813" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/cmps/notes/note-color-pallete.cmp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/notes-app/note-details.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/notes-app/note-details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/cmps/notes/note-details.cmp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cmps/notes/note-details.cmp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/cmps/notes/notes-list.cmp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cmps/notes/notes-list.cmp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/services/notes.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/services/notes.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/services/util.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/services/util.service.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,13 +22,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-details.cmp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2697">
-              <caret line="87" column="99" selection-start-line="87" selection-start-column="99" selection-end-line="87" selection-end-column="99" />
+            <state relative-caret-position="-4124">
+              <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/notes-app/note-details.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2480">
+              <caret line="80" column="63" selection-start-line="80" selection-start-column="63" selection-end-line="80" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/cmps/notes/notes-list.cmp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/pages/notes-app.cmp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-517">
+              <caret line="29" column="51" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="51" />
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#0#55#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -31,8 +64,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+            <state relative-caret-position="185">
+              <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-color-pallete.cmp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="28" column="30" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="30" />
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="30" />
+              <caret line="30" column="30" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="30" />
+              <caret line="31" column="30" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="30" />
+              <caret line="32" column="30" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="30" />
+              <caret line="33" column="30" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="30" />
+              <caret line="34" column="30" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="30" />
+              <caret line="35" column="30" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/services/notes.service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="547">
+              <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+                <element signature="n#!!block;n#query#0" />
+                <element signature="n#!!block;n#generateNotes#0" />
+                <element signature="n#!!block;n#updateNote#0" />
+                <element signature="n#!!block;n#deleteNote#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/services/util.service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -49,14 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>miss-</find>
-      <find>miss-book</find>
-      <find>li</find>
-      <find>bookService</find>
-      <find>selectedBook</find>
-      <find>bookDetails</find>
-      <find>$emit</find>
-      <find>notes</find>
       <find>bookPreview</find>
       <find>booksForDisplay</find>
       <find>book</find>
@@ -79,6 +145,14 @@
       <find>dele</find>
       <find>notesForDisplay</find>
       <find>conso</find>
+      <find>currentNote</find>
+      <find>emit</find>
+      <find>note-selec</find>
+      <find>setSelectedNote</find>
+      <find>open</find>
+      <find>changeColor</find>
+      <find>var</find>
+      <find>noteColor</find>
     </findStrings>
     <replaceStrings>
       <replace>appsus</replace>
@@ -93,8 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/cmps/my-form.cmp.js" />
-        <option value="$PROJECT_DIR$/js/cmps/car/car-app.cmp.js" />
         <option value="$PROJECT_DIR$/js/cmps/car/book-app.cmp.js" />
         <option value="$PROJECT_DIR$/js/cmps/books/book-filter.cmp.js" />
         <option value="$PROJECT_DIR$/js/cmps/books/book-preview.cmp.js" />
@@ -128,7 +200,6 @@
         <option value="$PROJECT_DIR$/js/cmps/book/note-preview.cmp.js" />
         <option value="$PROJECT_DIR$/js/cmps/book/note-details.cmp.js" />
         <option value="$PROJECT_DIR$/fonts.html" />
-        <option value="$PROJECT_DIR$/js/services/util.service.js" />
         <option value="$PROJECT_DIR$/js/cmps/notes/note-preview.cmp.js" />
         <option value="$PROJECT_DIR$/js/tmpFile.js" />
         <option value="$PROJECT_DIR$/js/cmps/notes/notes-filter.cmp.js" />
@@ -137,13 +208,16 @@
         <option value="$PROJECT_DIR$/css/notes-app/notes-list.css" />
         <option value="$PROJECT_DIR$/css/about-page.css" />
         <option value="$PROJECT_DIR$/css/home-page.css" />
-        <option value="$PROJECT_DIR$/js/services/notes.service.js" />
-        <option value="$PROJECT_DIR$/js/pages/notes-app.cmp.js" />
         <option value="$PROJECT_DIR$/js/event-bus.js" />
+        <option value="$PROJECT_DIR$/css/app-header.css" />
+        <option value="$PROJECT_DIR$/js/cmps/notes/notes-list.cmp.js" />
+        <option value="$PROJECT_DIR$/js/pages/notes-app.cmp.js" />
+        <option value="$PROJECT_DIR$/js/cmps/notes/note-color-pallete.cmp.js" />
+        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/css/notes-app/note-details.css" />
         <option value="$PROJECT_DIR$/js/cmps/notes/note-details.cmp.js" />
-        <option value="$PROJECT_DIR$/css/app-header.css" />
-        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/js/services/notes.service.js" />
+        <option value="$PROJECT_DIR$/js/services/util.service.js" />
       </list>
     </option>
   </component>
@@ -176,6 +250,12 @@
             <path>
               <item name="appsus" type="b2602c69:ProjectViewProjectNode" />
               <item name="appsus" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="notes-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appsus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appsus" type="462c0819:PsiDirectoryNode" />
               <item name="font" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -192,7 +272,26 @@
               <item name="appsus" type="b2602c69:ProjectViewProjectNode" />
               <item name="appsus" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="cmps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appsus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appsus" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="cmps" type="462c0819:PsiDirectoryNode" />
+              <item name="notes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appsus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appsus" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appsus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appsus" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -215,7 +314,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/cmps/notes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -226,18 +325,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\js\cmps\notes" />
+      <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\img" />
+      <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\js" />
+      <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\font" />
+      <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\css\app-notes" />
       <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\js\cmps" />
       <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\js" />
       <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\js\cmps\pages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\img" />
-      <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\js" />
-      <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\js\cmps\notes" />
-      <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\font" />
-      <recent name="C:\GitProjects\Sprint3\Sprint3-Delivery\appsus\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -268,14 +367,7 @@
       <workItem from="1561022757390" duration="55000" />
       <workItem from="1561022820675" duration="186000" />
       <workItem from="1561023013898" duration="8427000" />
-      <workItem from="1561223072929" duration="4190000" />
-    </task>
-    <task id="LOCAL-00018" summary="Design changes">
-      <created>1560865854265</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1560865854265</updated>
+      <workItem from="1561223072929" duration="7837000" />
     </task>
     <task id="LOCAL-00019" summary="WIP">
       <created>1560869650701</created>
@@ -613,11 +705,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561225233770</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="WIP 1">
+      <created>1561227339181</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1561227339181</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89798000" />
+    <option name="totallyTimeSpent" value="93445000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -678,9 +777,9 @@
     <MESSAGE value="WIP 4" />
     <MESSAGE value="WIP 5" />
     <MESSAGE value="- Delete not supported&#10;- gNotes in &quot;server&quot;, now passes a deep copy of it, and not itself&#10;- design fixes and updates" />
-    <MESSAGE value="WIP 1" />
     <MESSAGE value="Pin Unpin logic added to notes details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pin Unpin logic added to notes details" />
+    <MESSAGE value="WIP 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP 1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/vue.js">
@@ -783,25 +882,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/services/util.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/tmpFile.js" />
     <entry file="file://$PROJECT_DIR$/js/cmps/notes/notes-filter.cmp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-preview.cmp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -840,44 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/event-bus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/services/notes.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-            <element signature="n#!!block;n#generateNotes#0" />
-            <element signature="n#!!block;n#updateNote#0" />
-            <element signature="n#!!block;n#deleteNote#0" />
-            <element signature="n#!!block;n#createRandomNote#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/cmps/notes/notes-list.cmp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/pages/notes-app.cmp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2232">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/app-header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -885,27 +932,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-preview.cmp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cmps/notes/notes-list.cmp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pages/notes-app.cmp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-517">
+          <caret line="29" column="51" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/event-bus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+        <state relative-caret-position="185">
+          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/notes-app/note-details.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="42" column="10" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="22" />
+        <state relative-caret-position="2480">
+          <caret line="80" column="63" selection-start-line="80" selection-start-column="63" selection-end-line="80" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-color-pallete.cmp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="30" />
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="30" />
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="30" />
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="30" />
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="30" />
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="30" />
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="30" />
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cmps/notes/note-details.cmp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2697">
-          <caret line="87" column="99" selection-start-line="87" selection-start-column="99" selection-end-line="87" selection-end-column="99" />
+        <state relative-caret-position="-4124">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/services/notes.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="14" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
+            <element signature="n#!!block;n#query#0" />
+            <element signature="n#!!block;n#generateNotes#0" />
+            <element signature="n#!!block;n#updateNote#0" />
+            <element signature="n#!!block;n#deleteNote#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/services/util.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
