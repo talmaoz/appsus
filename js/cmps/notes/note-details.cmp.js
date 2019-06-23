@@ -10,6 +10,9 @@ import {COLOR_GREY   } from './note-color-pallete.cmp.js'
 import {COLOR_YELLOW } from './note-color-pallete.cmp.js'
 import {COLOR_BROWN  } from './note-color-pallete.cmp.js'
 
+const CLOSE_PALLETE_DELAY = 5000
+
+
 export default {
     props: ['note'],
     template: `
@@ -53,6 +56,7 @@ export default {
             
             <textarea 
                 v-model="note.title"
+                @click="closeColorPallete"
                 v-bind:placeholder="titlePlaceholder"
                 rows="1" cols="100" class="textarea-h3">
             </textarea>
@@ -61,6 +65,7 @@ export default {
                 v-if="note.thumbnail"
                 v-bind:title="note.title"
                 v-bind:src="note.thumbnail"
+                @click="closeColorPallete"
             >
             
             <textarea
@@ -68,10 +73,13 @@ export default {
                 v-model="note.txt"
                 v-bind:placeholder="txtPlaceholder"
                 rows="1" cols="100"  
-                class="textarea-h4">
+                class="textarea-h4"
+                @click="closeColorPallete">
             </textarea>
             
-            <ul v-if="note.checkList"> 
+            <ul 
+                v-if="note.checkList"
+                @click="closeColorPallete"> 
                 <li
                     v-bind:key="checkItem"
                     v-for="(checkItem, checkIdx) in note.checkList">
@@ -135,6 +143,9 @@ export default {
         },
         toggleColorPallete() {
             this.isColorPalleteOpen = !this.isColorPalleteOpen
+        },
+        closeColorPallete() {
+            this.isColorPalleteOpen = false;
         },
     },
     watch: {
